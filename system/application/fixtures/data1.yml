@@ -1,0 +1,82 @@
+User:
+  Admin:
+    username: Administrator
+    password: testing
+    email: programming@gmail.com
+  Test:
+    username: TestUser
+    password: mypass
+    email: test@test.com
+  Foo:
+    username: Foobar
+    password: mypass
+    email: test2@test2.com
+  User_1:
+     username: myeonwoo
+     password: myeonwoo
+     email: myeonwoo@gmail.com
+
+Forum:
+  Forum_1:
+    title: Introduce Yourself!
+    description: >
+      Use this forum to introduce yourself to the CodeIgniter community,
+      or to announce your new CI powered site.
+  Forum_2:
+    title: The Lounge
+    description: >
+      CodeIgniter's social forum where you can discuss anything not related
+      to development. No topics off limits... but be civil.
+  Forum_3:
+    title: CodeIgniter Discussion
+    description: This forum is for general topics related to CodeIgniter.
+  Forum_4:
+    title: Code and Application Development
+    description: >
+      Use the forum to discuss anything related to
+      programming and code development.
+  Forum_5:
+    title: Ignited Code
+    description: >
+      Use this forum to post plugins, libraries, or other code contributions,
+      or to ask questions about any of them.
+
+Category:
+  Lounge:
+    title: The CodeIgniter Lounge
+    Forums: [Forum_1, Forum_2]
+  Dev:
+    title: CodeIgniter Development Forums
+    Forums: [Forum_3, Forum_4, Forum_5]
+
+Thread:
+  Thread_1:
+    title: Hi there!
+    Forum: Forum_1
+  Thread_2:
+    title: Greetings to all
+    Forum: Forum_1
+
+Post:
+  Post_1:
+    Thread: Thread_1
+    User: Test
+    created_at: 2009-11-20 01:20:30
+    content: >
+      Hello everyone! My name is Test, and I go to school at
+      Test Institute of Technology in the US.
+      I just found CodeIgniter some time last week and have been
+      reading through the documentation trying to get myself acquainted.
+
+      Hopefully the forums will be a great help! I already have some questions.
+      Thanks!
+  Post_2:
+    Thread: Thread_1
+    User: Admin
+    created_at: 2009-11-20 02:15:33
+    content: Welcome Test! Nice to meet you.
+  Post_3:
+    Thread: Thread_2
+    User: Foo
+    created_at: 2009-11-19 12:14:50
+    content: I am new here. Just wanted to say hi.

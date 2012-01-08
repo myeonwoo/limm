@@ -1,0 +1,1505 @@
+/*
+  Screen.css
+  Editor: Aubyn Freybe-Smith, Steve Saugestad (Wallop)
+*/
+
+
+/* NOTE ABOUT BACKGROUNDS AND STYLES:
+the website's css set's the look of sections/pages based on the style of its background
+- there is a darkbg look (hospitality)
+- there is a lightbg look (main site, tan background), which has a bottom area with a wallpapger bg
+
+to apply a 'look' to a page, you have to apply the class "lightbg" or "darkbg" to the body tag.
+
+#main_wrap is applied to the DIV around the top portion of the pages
+#secondary_wrap is applied to the DIV around the bottom portion of the pages (which has a wallpaper bg on the lightbg (non-hospitatlity) pages of the site)
+
+
+
+/* = whole page
+--------------------------------------------------------------------------------*/
+
+body { 
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  background-color: #141414;
+}
+
+body.lightbg {
+  background-color:#282626; 
+}
+body.darkbg div.container_12 {
+  background: url(../graphics/bg_grid_darkbg01.gif) repeat-y center top;
+}
+body.lightbg #main_wrap {
+  background: #fefefc url(../graphics/bg_body_lightbg_top01.gif) repeat-y center top;
+}
+body.lightbg #main_wrap div.container_12 {
+  background: url(../graphics/bg_grid_lightbg01.gif) repeat-y center top;
+}
+
+.lightbg #secondary_wrap {
+  background-color:#282626;
+  border-top:7px solid #1d1a1a;
+  width:100%;
+}
+
+.topRule {
+  height:50px;
+  border-bottom:1px solid #666;
+}
+
+
+/* = misc
+--------------------------------------------------------------------------------*/
+
+.flickr {
+  width:300px;
+  height:300px;
+  float:right;
+}
+
+.fb {
+  float:right;
+}
+
+.tweet {
+  float:left;
+}
+
+.socialBox {
+  display:block;
+  clear:both;
+}
+
+/* =Spacing
+--------------------------------------------------------------------------------*/
+
+ol { list-style: decimal; }
+
+ul { list-style: none; }
+
+li { }
+
+p,
+dl,ol,ul,
+hr,
+h1,h2,h3,h4,h5,h6,
+pre,
+table,
+address,
+fieldset
+{
+  
+}
+
+/* = Generic
+--------------------------------------------------------------------------------*/
+
+.floatleft { float: left; }
+.floatright { float: right; }
+.clearleft { clear: left; }
+.clearright { clear: right; }
+.clearboth { clear: both; }
+.textcenter { text-align: center; }
+.textright { text-align: right; }
+.textleft { text-align: left; }
+.blue { color: #09375c; }
+
+/* spacers. to be used on TDs, empty DIVs, even Ps, when vertical space is needed */
+.spacer5 { padding-top: 5px; }
+.spacer7 { padding-top: 7px; }
+.spacer10 { padding-top: 10px; }
+.spacer20 { padding-top: 20px; }
+.spacer30 { padding-top: 30px; }
+.spacer40 { padding-top: 40px; }
+.spacer50 { padding-top: 50px; }
+.spacer60 { padding-top: 60px; }
+.spacer70 { padding-top: 70px; }
+.spacer80 { padding-top: 80px; }
+
+/* used for items that show show up only when printing */
+.for_print01 {
+  display: none;
+}
+
+.darkbg hr {
+  border-color: #444;
+  border-style: solid;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+}
+
+
+
+
+/* =Headings
+--------------------------------------------------------------------------------*/
+
+h1 {
+  font-size: 24px;
+  letter-spacing: -1px;
+} 
+h1.articleTitle {
+  font-size:40px;
+  width:400px;
+}
+h2 {
+  font-size: 22px;
+}
+h3 { /* sub section titles, ie "Bearfoot Bistro" */
+  font-size: 20px;
+  padding-bottom:5px;
+}
+h3.articleTitle {
+  font-size:40px;
+  padding-bottom:0px;
+}
+h3.articleTitle a {
+  padding:0;
+}
+h4 { font-size: 18px; } 
+h5 { font-size: 14px; } 
+h6 { font-size: 13px; }
+
+.homeBlurb {
+  font-size:29px;
+  color:#6A6244;
+  letter-spacing:.5px;
+  font-weight:200;
+}
+
+.blurbOne {
+  background:url(../graphics/t_homeBlurb_1.png) no-repeat 0 0;
+  height:68px;
+  width:687px;
+} 
+
+a.blurbTwo {
+  background:url(../graphics/t_homeBlurb_2.png) no-repeat 0 0;
+  height:29px;
+  width:695px;
+  margin-top:4px;
+  display:block;
+} 
+
+a.blurbTwo:hover {
+  background-position:0 -29px;
+} 
+
+.homeBlurb span {
+  display:block;
+  text-indent:-9999px;
+}
+
+h1.interiorMainTitle {
+  font-size:35px;
+  line-height:60px;
+  color:#6a6244;
+  letter-spacing:.5px;
+  font-weight:100;
+}
+
+/* h2 are for section titles, ie "case studies" -- use outside of a grid col wrapper (ie grid_6) */
+h2.section_heading { 
+  line-height: 1.1; /* since this type of h2 has no padding-bottom, 1.1 helps prevent the bottom of characters from being cut off in ie6,7 */
+}
+.darkbg h2.section_heading { 
+  background: url(../graphics/bg_1pxline_darkbg01.gif) repeat-x 0 20px;
+  padding-left: 20px;
+  /* color: #3a83b0;  blue */
+}
+.lightbg h2.section_heading { 
+  /*background: url(../graphics/bg_1pxline_lightbg01.gif) repeat-x 0 20px;*/
+  padding-left: 20px;
+  color:#6A6244;
+  font-weight:normal;
+  /* color: #3a83b0;  blue */
+}
+h2.tContact {
+  background:url(../graphics/t_contact.png) no-repeat 0 0;
+  width:451px;
+  height:42px;
+  margin-left:20px;
+}
+.darkbg h2.tContact {
+  background:url(../graphics/t_contact_darkbg.png) no-repeat 0 0;
+  width:451px;
+  height:42px;
+  margin-left:20px;
+}
+h2.tContact span {
+  display:block;
+  text-indent:-9999px;
+}
+h2.tSubscribe {
+  background:url(../graphics/t_subscribe.png) no-repeat 0 0;
+  width:263px;
+  height:21px;
+  margin:0 0 3px 20px;
+}
+.darkbg h2.tSubscribe {
+  background:url(../graphics/t_subscribe.png) no-repeat 0 -21px;
+  width:263px;
+  height:21px;
+  margin:0 0 3px 20px;
+}
+h2.tSubscribe span {
+  display:block;
+  text-indent:-9999px;
+}
+.lightbg h5.section_heading_home{
+  padding-left: 20px;
+  color:#6A6244;
+  font-weight:bold;
+}
+
+h5.tFeaturedProjects {
+  background:url(../graphics/t_featured_project.png) no-repeat 0 0;
+  width:122px;
+  height:15px;
+  margin-left:35px;
+}
+
+h5.tFeaturedProjects span {
+  display:block;
+  text-indent:-9999px;
+}
+.lightbg h2.section_heading span { /* targets the "there's lots more! go" text on the homepage, beside the h2 "our work" */
+  font-size: 18px;
+  color: #7e7e7e;
+  padding-left: 20px;
+} 
+.lightbg #secondary_wrap h2.section_heading { 
+  background: url(../graphics/bg_1pxline_wallpaperbg01.gif) repeat-x 0 20px;
+  color: #2e628d; /* darker blue */
+}
+
+h2.section_heading.skinny {
+  width: 698px;
+  font-weight:100;
+}
+.paper h2.section_heading, .paper2 h2.section_heading {
+  width: auto;
+  font-size: 26px;
+  letter-spacing: -1.4px;
+  background: url(../graphics/bg_1pxline_darkbg01.gif) repeat-x 0 37px;
+  padding-bottom: 20px;
+  color: #111;
+  line-height: 1; /* resets back to 1, since the more general h2.section_heading class sets it to 1.1 */
+}
+
+.paper h2, .paper2 h2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.paper2 h3, .paper2 h4 {
+  padding-top: 15px;
+}
+.paper2 h4 {
+  padding-bottom: 15px;
+}
+.paper h3, .paper2 h3, .paper2 h4, .paper2 h4 {
+  color: #333;
+}
+
+
+
+
+
+/* = Header
+--------------------------------------------------------------------------------*/
+
+.lightbg #headerWrap {
+  background:url(../graphics/top_rule_bg.gif) repeat-x 0 89px;
+}
+
+.darkbg #headerWrap {
+  background:url(../graphics/top_rule_bg_dark.gif) repeat-x 0 89px;
+}
+
+.innerHeadRule {
+  background:url(../graphics/top_rule_bg.gif) repeat-x 0 89px;
+  height:100px;
+  width:100%;
+  padding-left:20px;
+}
+
+.darkbg .innerHeadRule {
+  background:url(../graphics/top_rule_bg_dark.gif) repeat-x 0 89px;
+}
+
+#header01 {
+  height:100px;
+  margin:0 auto;
+  width:984px;
+  position: relative;
+}
+.darkbg #header01 {
+  background: url(../graphics/bg_grid_darkbg01.gif) repeat-y 0 0;
+}
+.lightbg #header01 {
+  background: url(../graphics/bg_grid_lightbg01.gif) repeat-y 0 0;
+}
+
+#header01 a#logo_wallop {
+  display: block;
+  height: 48px;
+  width: 148px;
+  position: absolute;
+  top: 50px;
+  padding:0;
+  z-index:500px;
+}
+.darkbg #header01 a#logo_wallop {
+  background: url(../graphics/logo_wallop_darkbg01.gif) no-repeat 0 0;
+}
+.lightbg #header01 a#logo_wallop {
+  background: url(../graphics/logo_wallop_lightbg01.gif) no-repeat 0 0;
+}
+#header01 a#logo_wallop:hover {
+  background-position: 0 -48px;
+}
+#header01 a#logo_wallop span {
+  display: none;
+}
+
+#header01 p#logo_hospitality {
+  height: 45px;
+  width: 155px;
+  left:180px;
+  top: 56px;
+  position:absolute;
+  margin: 0;
+}
+.darkbg #header01 p#logo_hospitality {
+  background: url(../graphics/logo_hospitality_darkbg01.gif) no-repeat 0 0;
+}
+#header01 p#logo_hospitality span {
+  display: none;
+}
+
+a#contact_btn {
+  display: block;
+  height: 26px;
+  width: 77px;
+  position:relative;
+  top:-15px;
+  left:738px;
+  margin: 0;
+  padding:0;
+  background-color: transparent;
+  font-weight:800;
+  color:#95908d;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:11px;
+}
+
+a#jobs_btn {
+  display: block;
+  height: 26px;
+  width: 70px;
+  position:relative;
+  top:-41px;
+  left:815px;
+  margin: 0;
+  padding:0;
+  background-color: transparent;
+  font-weight:800;
+  color:#95908d;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:11px;
+}
+
+a#subscribe_btn {
+  display: block;
+  height: 26px;
+  width: 78px;
+  position:relative;
+  top:-67px;
+  left:885px;
+  margin: 0;
+  padding:0;
+  background-color: transparent;
+  font-weight:800;
+  color:#95908d;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:11px;
+}
+
+a#contact_btn span, a#jobs_btn span, a#subscribe_btn span {
+  text-indent:-9999px;
+  display:block;
+}
+
+.lightbg #header01 a#contact_btn, .darkbg #header01 a#contact_btn  {
+  background:url(../graphics/btn_contact.png) no-repeat 0 0;
+}
+
+.lightbg #header01 a#jobs_btn, .darkbg #header01 a#jobs_btn {
+  background:url(../graphics/btn_contact.png) no-repeat -77px 0;
+}
+
+.lightbg #header01 a#subscribe_btn, .darkbg #header01 a#subscribe_btn {
+  background:url(../graphics/btn_contact.png) no-repeat -147px 0;
+}
+
+.lightbg #header01 a#contact_btn:hover, .darkbg #header01 a#contact_btn:hover {
+  background-position:0 -26px;
+}
+
+.lightbg #header01 a#jobs_btn:hover, .darkbg #header01 a#jobs_btn:hover {
+  background-position:-77px -26px;  
+}
+
+.lightbg #header01 a#subscribe_btn:hover, .darkbg #header01 a#subscribe_btn:hover {
+  background-position:-147px -26px; 
+}
+
+#jobsBlock {
+  width:700px;
+  padding:25px;
+  color:#333;
+}
+
+#jobsBlock h5 {
+  margin-bottom:5px;  
+}
+
+/*#header01 a#contact_btn:hover {
+  background-position: 0px -16px;
+}
+#header01 a#contact_btn span {
+  display: none;
+}*/
+
+/* = homepage feature slider
+--------------------------------------------------------------------------------*/
+
+
+#sliderWrapper {
+  margin:15px 0 15px;
+  position:relative;
+  width:984px;
+  height:493px;
+}
+
+ul#sliderImages {
+  position:relative;
+  left:36px;
+  top:7px;
+}
+
+ul#sliderImages li {
+  list-style:none;
+  padding:0;
+  width:912px;
+  float:left;
+  height:493px;
+}
+
+/*#featureSlider img {
+  padding:0;
+}
+
+#featureSlider li a {
+  float:left; 
+  border:none !important;
+  background:none !important;
+  text-decoration:none;
+  height:493px;
+  width:912px;
+}*/
+
+#sliderImages li a.slideTitle {
+  float:none;
+  position:absolute;
+  left:104px;
+  top:-29px;
+  z-index:50px;
+  height:8px;
+  padding:5px 25px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+ul#sliderNav {
+  position:absolute;
+  z-index:500;
+  width:962px;
+  top:70px;
+}
+
+ul#sliderNav li {
+  list-style:none;  
+}
+
+#nextSlide {
+  position:absolute;
+  background:url(../graphics/btn_featureSlider_left.png) no-repeat 0 0;
+  height:81px;
+  width:36px;
+  left:0px;
+  display:block;
+  padding:0;
+}
+
+#nextSlide:hover {
+  background-position:-36px 0;
+}
+
+#prevSlide {
+  position:absolute;
+  background:url(../graphics/btn_featureSlider_right.png) no-repeat -36px 0;
+  height:81px;
+  width:36px;
+  top:0px;
+  right:-2px;
+  display:block;
+  padding:0;
+}
+
+#prevSlide:hover {
+  background-position:0 0;
+}
+
+#nextSlide span, #prevSlide span {
+  display:block;
+  text-indent:-9999px;
+}
+
+a.viewPortfolioLink {
+  float:right;  
+}
+
+.viewProjectHighlight {
+  font-size:12px;
+  position:absolute;
+  top:220px;
+  left:400px;
+  width:110px;
+  text-align:center;
+  z-index:200;
+  background-color:#FEFEFC;
+  color:#1D1A1A;
+  padding:10px;
+  display:block;
+  -moz-border-radius:18px;
+  -webkit-border-radius:18px;
+}
+
+
+/* = contact box, article sign-up box, and forms
+--------------------------------------------------------------------------------*/
+
+
+/* generic styling for forms, v1 */
+.form_style01 p { }
+.form_style01 label { }
+.form_style01 input, .form_style01 textarea {
+  font-family: Arial,sans-serif;
+  font-size: 15px;
+  border: 1px solid #aaa;
+}
+.darkbg .form_style01 input, .darkbg .form_style01 textarea {
+  background-color: #ffffff!important; /* mid blue */
+  color: #eee;
+}
+.lightbg .form_style01 input, .lightbg .form_style01 textarea {
+  background-color: #ffffff!important; /* light blue */
+  color: #000;
+}
+.form_style01 input {
+  height: 20px; 
+  padding: 4px 5px 1px 5px;
+}
+.form_style01 textarea {
+  padding: 5px;
+  font-size: 13px;
+}
+.form_style01 .checkbox {
+  background: none!important;
+  border: none;
+  height: 15px;
+  width: 15px !important;
+  padding: 0;
+}
+.form_style01 input.send_btn {
+  height: 39px;
+  width: 90px !important;
+  padding: 0;
+  border: none;
+  background: none!important;
+
+}
+.form_style01 ul.errorlist {
+  padding: 0;
+  margin: 0;
+}
+.form_style01 ul.errorlist li {
+  list-style-type: none;
+  margin: 0;
+  color: #ff0000;
+}
+
+/* wraps around contact box that opens at tops of each page, when click 'contact' */
+#contact_box {
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+}
+/*
+.darkbg #contact_box {
+  background: url(../graphics/bg_1pxline_darkbg02.gif) no-repeat left bottom;
+}
+.lightbg #contact_box {
+  background: url(../graphics/bg_1pxline_lightbg02.gif) no-repeat left bottom;
+}*/
+#contact_box form p { }
+#contact_box form label { }
+#contact_box form input, #contact_box form textarea {
+  width: 188px; /* padding + width + border must <= 200 */
+}
+#contact_box form input { }
+#contact_box form textarea {
+  height: 100px;
+}
+#contact_box form .checkbox { }
+#contact_box form input.send_btn {
+  margin-top: 5px;
+}
+#contact_box .line_left { /* used to separate the text contact info from the form */
+  padding-left: 40px;
+  height: 235px;
+}
+.darkbg #contact_box .line_left { /* used to separate the text contact info from the form */
+  border-left: 1px solid #444;
+}
+.lightbg #contact_box .line_left { /* used to separate the text contact info from the form */
+  border-left: 1px solid #aaa;
+}
+#contact_box ul.errorlist { }
+#contact_box ul.errorlist li { }
+
+/*controls subscribe drop down box*/
+#subscribe_box {
+  margin-bottom:20px;
+  padding-bottom:25px;
+  /*background:url(../graphics/bg_1pxline_lightbg02.gif) no-repeat left bottom;*/
+}
+/* wraps around small form to sign up for articles, at bottom of each article */
+#article_signup {
+  margin-top: 50px;
+}
+#subscribe_box #article_signup {
+  margin-top:0;
+}
+#article_signup form input {
+  width: 188px; /* padding + width + border must <= 200 */
+}
+#article_signup form input.send_btn {
+  /*margin-left: 59px;*/
+  margin-top: 14px;
+}
+/*Hides the form loading icon*/
+#article_signup, .form-indicator {
+  display: none;
+} 
+
+
+
+/* = Nav
+--------------------------------------------------------------------------------*/
+
+ul#nav {
+  width: 186px;
+  padding-left: 20px;
+  position: absolute;
+  /*top: 185px;*/
+  top:42px;
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  /* border: solid 1px green; */
+}
+ul#nav.scroll {
+  position: fixed;
+}
+ul#nav a {
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0;
+}
+ul#nav li {
+  list-style-type: none;
+  padding-left: 12px;
+  margin-bottom: 8px;
+}
+ul#nav ul { /* for subnav list */
+  padding-top: 8px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+ul#nav ul li {
+  background-image: none !important; /* hides arrow graphic on subnav (case study links) */
+}
+
+.darkbg ul#nav a { color: #e34000; }
+.lightbg ul#nav a { color: #c73901; }
+.darkbg ul#nav a:hover { color: #fff; }
+.lightbg ul#nav a:hover { color: #8c8874; }
+.darkbg ul#nav ul a { color: #bbb; } /* for subnav links */ 
+.lightbg ul#nav ul a { color: #262520; } /* for subnav links */
+
+.darkbg ul#nav li {
+  color: #fff;
+  background: url(../graphics/bullet_nav_single_ondark.gif) no-repeat 0px 5px;
+}
+.lightbg ul#nav li {
+  color: #222;
+  background: url(../graphics/bullet_nav_single_onlight.gif) no-repeat 0px 5px;
+}
+.darkbg ul#nav li.nav_active {
+  background: url(../graphics/bullet_nav_double_ondark.gif) no-repeat 0px 5px;
+}
+.lightbg ul#nav li.nav_active {
+  background: url(../graphics/bullet_nav_double_onlight.gif) no-repeat 0px 5px;
+}
+.darkbg ul#nav li.nav_reversebullet { /* for "back to main page" in 'hospitality' */
+  background-image: url(../graphics/bullet_nav_single_rev_ondark.gif);
+  font-style: italic;
+}
+ul#nav li.nav_nobullet { /* for 'hospitality' text */
+  background: none;
+  color: #555;
+  font-style: italic;
+}
+ul#nav li.nav_nobullet a {
+  color: #666;
+}
+
+a.anchor01 { /* used on anchor links in the body, so that they are invisible */
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+
+
+
+/* = Highlight style (background boxes behind text
+--------------------------------------------------------------------------------*/
+
+
+/*
+highlight               used when text needs to have a low-contrast bg
+highlight_strong            used when text needs a high-contrast bg
+highlight_large, highlight_large2   used when text in p tags should be extra large
+
+usage: all highlight text must have either a class of "hightlight" or "highlight_strong" applied to it, depending on if you want a low or high-contrast bg color
+on top of that, if you want regular P tag text to be extra big, throw the class "highlight_large" or highlight_large2" on to it as well. 
+
+*/
+
+.darkbg .highlight_strong span { /* highlight_strong spans on a darkbg have a white bg */
+  background-color: #fff;
+  color: #111;
+  padding:4px 4px;
+}
+
+.lightbg #secondary_wrap .highlight_strong span { /* .highlight_strong spans on wallpaper have a blue bg */
+  background-color: #3c668a;
+  color: #fff;
+}
+.darkbg .highlight span, .darkbg .highlight ul li { /* spans have a dark grey bg */
+  background-color: #1f1f1f;
+  color: #ccc;
+}
+.lightbg .highlight span, .lightbg .highlight ul li { /* spans have a light grey bg, and lists */
+  background-color: #d9d5b2;
+  color: #333;
+}
+.lightbg #secondary_wrap .highlight span, .lightbg #secondary_wrap .highlight ul li { /* highlight spans on wallpaper have a white bg, and lists */
+  background-color: #fff;
+  color: #09375c; /* blue */
+}
+.paper .highlight span, .paper .highlight ul li, .paper2 .highlight span, .paper2 .highlight ul li { /* in "paper" divs, spans have a light grey bg, and lists */
+  background-color: #e1e1e1;
+  color: #111;
+}
+.darkbg .highlight h1 span { /* makes the h1 brighter and less heavy weight */
+  color: #fff;
+  /* font-weight: normal; */
+}
+.highlight_strong h1, .highlight h1 {
+  margin-bottom: 15px;
+  line-height: 32px; /* ie6, ie7 needs 33px here */
+}
+.highlight p, .highlight_strong p {
+  margin-bottom: 15px;
+  line-height: 20px; /* ie6, ie7 needs 21px here */
+}
+.highlight_strong h1 span, .highlight h1 span {
+  padding: 0px 3px 2px 1px;
+}
+.highlight p span, .highlight_strong p span {
+  padding: 1px 4px 2px 1px;
+}
+
+.highlight_large p, p.highlight_large { /* used when text in p tags needs to be extra big, like on homepage intro */
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+  line-height: 29px !important; /* ie6, ie7 needs 28px here */
+  letter-spacing: -1px;
+}
+.highlight_large2 p, p.highlight_large2 { /* used when text in p tags needs to be extra big, but not as big as above, like on article intros */
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 0;
+  line-height: 24px !important; /* ie6, ie7 needs 23px here */
+}
+
+
+
+
+
+
+/* = text formatting, through the lightbg and darkbg parent class
+--------------------------------------------------------------------------------*/
+
+.darkbg {
+  color: #ccc;
+}
+.lightbg {
+  color: #222;
+}
+.lightbg #secondary_wrap {
+  color: #09375c;
+}
+
+/* Links */
+.darkbg a, .lightbg a { 
+  /*background-color: #b53300;*/ /* orange */
+  color:#b53300;
+  /*padding: 1px 4px 2px 4px;*/
+  text-decoration: none;
+}
+.darkbg a:hover, .lightbg a:hover {
+  color: #8C8874; 
+}
+
+/* apply to block elements that hold a tags that you don't want the default orange bg to apply to */
+.links_nobg a {
+  background-color: transparent;
+  color: #e74500;
+  padding: 0px;
+}
+.links_nobg a:hover {
+  background-color: transparent;
+  color: #aaa;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+
+ul {
+  line-height: 16px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+ul li {
+  list-style-type: circle;
+  margin-bottom: 8px;
+  line-height:20px;
+}
+ul  ul { /* nested lists */
+  padding-top: 8px;
+}
+ol {
+  line-height: 16px;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+ol li {
+  margin-bottom: 8px;
+}
+
+/* use on regular text, to make a bit bigger. ie text over social media icons on homepage */
+.largeText01 {
+  font-size: 16px;
+}
+.smallText01 {
+  font-size: 11px !important;
+}
+
+
+
+
+/* = project thumbnail entries on home and portfolio pages
+--------------------------------------------------------------------------------*/
+
+/* thumb preview of projects (homepage and portfolio page) */
+.project_thumb { /*applied to the grid_3 that wraps around each project thumb entry */
+  margin-bottom: 25px;
+}
+.project_thumb a {
+  background-color: transparent;
+  color: #E74500;
+  padding: 0px;
+  font-weight:500;
+}
+
+.project_thumb p a {
+  color:#333; 
+  font-weight:400;
+}
+.project_thumb img {
+  background-color: #d1c9a6;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.project_thumb h3 {
+  font-size: 16px;
+  padding: 0;
+  line-height:17px;
+}
+
+.project_thumb h3 a {
+  font-weight:bold
+}
+
+.project_thumb:hover p a, .project_thumb:hover h3 a {
+  color: #000;
+}
+.project_thumb:hover p {
+  text-decoration: underline;
+}
+.project_thumb:hover img {
+  background-color: #b1aa8c;
+}
+.project_thumb a:hover {
+  background-color: transparent;
+}
+
+
+
+
+/* = painting thumbnails (for about us) on homepage = CURRENTLY HIDDEN
+--------------------------------------------------------------------------------*/
+
+.us_thumbs p {
+  margin: 0;
+  line-height: 0px;
+}
+.us_thumbs a {
+  display: inline-block;
+}
+.us_thumbs a span {
+  display: none;
+}
+.us_thumbs a.steve {
+  width: 164px;
+  height: 206px;
+  background: url(../graphics/home/us_thumb_test1.png) no-repeat 0 0;
+}
+.us_thumbs a.wes {
+  width: 168px;
+  height: 194px;
+  background: url(../graphics/home/us_thumb_test2.png) no-repeat 0 0;
+}
+.us_thumbs a.aubyn {
+  width: 158px;
+  height: 187px;
+  background: url(../graphics/home/us_thumb_test3.png) no-repeat 0 0;
+  
+}
+.us_thumbs a.geoff {
+  width: 291px;
+  height: 161px;
+  background: url(../graphics/home/us_thumb_test4.png) no-repeat 0 0;
+}
+.us_thumbs a.jeremy {
+  width: 183px;
+  height: 168px;
+  background: url(../graphics/home/us_thumb_test5.png) no-repeat 0 0;
+}
+
+
+/* = Tags filter box on Portofolio page
+--------------------------------------------------------------------------------*/
+
+/* #tags is wrapped around the tag buttons on the portfolio page */
+div#tags {
+  padding: 1px 0 3px 0;
+  /*border-color: #444;*/
+  /*border-style: solid;
+  border-left-width: 5px;
+  border-bottom: none;*/
+}
+div#tags p {
+  margin: 5px 0 0 0;
+}
+div#tags a {
+  background-color:#C73901;
+  color: #fff;
+  padding: 3px 12px 3px 12px;
+  font-size: 11px;
+  font-weight:bold;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  
+}
+div#tags a:hover {
+  background-color: #333;
+}
+div#tags a.viewall {
+  background-color: #222;
+}
+div#tags a.viewall:hover {
+  background-color: #444;
+}
+
+
+
+/* = Case Study, on the hospitality main page
+--------------------------------------------------------------------------------*/
+
+.case_study {
+  padding: 50px 0 50px 0;
+  background: url(../graphics/bg_1pxline_darkbg02.gif) no-repeat bottom left; /* adds line below each case study, but not full width of page */
+  display: inline-block;
+}
+.case_study h3 { /* make the project names bigger */
+  font-size: 24px;
+}
+.darkbg .case_study .case_study_ss {
+  background: #0a0a0a;
+  border: solid 5px #0a0a0a;
+}
+
+.case_study_ss img {
+  width: 440px;
+  height: 340px;
+  display: none;
+}
+
+.forceDisplay {
+  display: block!important;
+}
+
+.pager {
+  padding: 0;
+  margin: 9px 0 0 0;
+  text-align: center;
+  float: right;
+}
+.pager li {
+  list-style: none;
+  display: block;
+  margin: 3px 2px;
+  width: 7px;
+  height: 7px;
+  background-repeat: no-repeat;
+  background-position: right;
+  float: left;
+  cursor: pointer;
+}
+.darkbg .pager li {
+  background-image: url(../graphics/pager/pager_widget_circles.gif);
+}
+.pager li.active {
+  background-position: left;
+}
+.pager li span {
+  display: none;
+}
+.pager_arrows {
+  float: right;
+  margin: 7px 5px 0 10px;
+}
+.pager_left_arrow {
+  width: 14px;
+  height: 17px;
+  float: left;
+}
+.pager_right_arrow {
+  width: 14px;
+  height: 17px;
+  float: left;
+  margin-left: 8px;
+}
+.darkbg .pager_left_arrow:hover, .darkbg .pager_right_arrow:hover {
+  background-position: 0 -17px;
+  cursor: pointer;
+}
+.darkbg .pager_left_arrow {
+  background: url(../graphics/pager/pager_left_arrow.gif) no-repeat 0 0;
+}
+.darkbg .pager_right_arrow {
+  background: url(../graphics/pager/pager_right_arrow.gif) no-repeat 0 0;
+}
+
+
+
+/* = breadcrumbs (on article pages, at least)
+--------------------------------------------------------------------------------*/ 
+ 
+p#breadcrumbs {
+  position: absolute;
+  top: 40px;
+  right:265px;
+  color: #666;
+}
+p#breadcrumbs a {
+  padding:0;
+  color: #666;
+  background-color: transparent;
+  font-size: 11px;
+}
+p#breadcrumbs a:hover {
+  color: #bbb;
+  text-decoration: underline;
+}
+ 
+
+
+/* = paper (content on a negative background, to stand out)
+--------------------------------------------------------------------------------*/
+
+/*
+paper = for homepage, lots of margin and padding
+paper2 = for article pages, less margin and padding. This class name mustn't change, as the js at the top of base_article.html template uses it to target a href tags with images inside them (to remove background-color and padding from the link).
+*/
+
+.paper, .paper2 {
+  width: 738px;
+  color: #222;
+}
+.paper {
+  margin-top: 50px;
+  padding: 35px 0 40px 0;
+}
+.paper2 {
+  margin-top: 20px;
+  padding: 25px 0 20px 0;
+}
+
+.darkbg .paper, .darkbg .paper2 {
+  background: #f2f2f2 url(../graphics/bg_paper_lightbg01.gif) repeat-y 0 0;
+  border-top: dashed 1px #333;
+  border-bottom: dashed 1px #333;
+}
+.lightbg .paper, .lightbg .paper2 {
+  background: #f2f2f2 url(../graphics/bg_paper_lightbg01.gif) repeat-y 0 0;
+  border-top: solid 5px #ded9c0;
+  border-bottom: solid 5px #ded9c0;
+}
+.paper2 img {
+  border: dashed 1px #aaa;
+}
+
+.paper2 p.article_caption { /* used on captions of screenshots and images in articles */
+  font-style: italic;
+  /* text-align: right; */
+  font-size: 11px;
+  line-height: 14px;
+  margin-top: -12px;
+}
+.paper2 p.article_caption a {
+  background-color: transparent;
+  color: #b53300; /* orange */
+  padding: 0;
+}
+.paper2 p.article_caption a:hover {
+  text-decoration: underline;
+  color: #666;
+}
+.paper2 a.article_simplelink {
+  background-color: transparent;
+  padding: 0;
+  text-decoration: none;
+}
+.paper2 a:hover img {
+  border-color: #b53300; /* orange */
+}
+
+p.byLine {
+  font-size:11px;
+  font-weight:bold;
+}
+
+p.articleLead {
+  color:#40403e;  
+}
+
+
+
+
+/* = services list, on the services page
+--------------------------------------------------------------------------------*/
+
+.services_list h5 {
+  padding-top: 5px;
+  /*padding-bottom: 5px;*/
+  line-height: 16px;
+  font-size:16px;
+}
+.services_list .smallText01 {
+  line-height: 14px;
+}
+.services_list p { /* adds a little more space between entries */
+  margin-bottom: 20px;
+  padding-top: 3px;
+}
+
+.services_list_legend {
+  border-top: dashed 1px #999;
+  border-bottom: dashed 1px #999;
+  padding: 10px 0 10px 0;
+}
+.services_list_legend p {
+  line-height: 14px;
+  font-size: 11px;
+  font-style: italic;
+  margin-bottom: 0px;
+}
+
+/* icons */
+.services_list .no span, .services_list .no_p span, .services_list .yes span, .services_list .yes_p span {
+  display: none;
+}
+.services_list .no {
+  height: 26px;
+  width: 26px;
+  background: url(../graphics/icon_no01.gif) no-repeat 0 0;
+}
+.services_list .no_p {
+  height: 26px;
+  width: 41px;
+  background: url(../graphics/icon_no_p01.gif) no-repeat 0 0;
+}
+.services_list .yes {
+  height: 26px;
+  width:26px;
+  background: url(../graphics/icon_yes01.gif) no-repeat 0 0;
+}
+.services_list .yes_p {
+  height: 26px;
+  width: 41px;
+  background: url(../graphics/icon_yes_p01.gif) no-repeat 0 0;
+}
+
+
+
+
+/* = footer
+--------------------------------------------------------------------------------*/
+
+#footer {
+  /* margin-top: 50px; */
+  /*border-top: 1px solid #666;*/
+}
+.darkbg #footer, .darkbg #footer a {
+  color: #666;
+}
+
+.lightbg #footer, .lightbg #footer a {
+  color:#7c7c7c;
+}
+
+.lightbg #footer a {
+  color:#de4c12;
+}
+
+#footer a {
+  padding:0;
+  background-color: transparent;
+  text-decoration: none;
+}
+#footer ul {
+  padding: 0 0 0 0;
+  margin: 0;
+  padding-bottom: 50px;
+}
+#footer ul li {
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 5px;
+}
+#footer ul li a:hover {
+  text-decoration: underline;
+}
+.darkbg #footer ul li a {
+  color:#C73901;
+}
+.darkbg #footer ul li a:hover {
+  color: #bbb;
+}
+.lightbg #footer ul li a:hover {
+  color:#666;
+}
+
+/* social media icons */
+/*ul#footer_sm li {
+  float: right;
+}
+ul#footer_sm li a.facebook, ul#footer_sm li a.twitter {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+ul#footer_sm li a.twitter {
+  background: url(../graphics/logo_twitter02.gif) no-repeat 0 0;
+  margin-left: 5px;
+}*/
+
+a.twitterIconFooter {
+  background:url(../graphics/icon_social_media_footer.png) no-repeat 0 0;
+  height:18px;
+  width:18px;
+  display:block;
+  float:left;
+  margin-right:5px;
+}
+
+a.twitterIconFooter:hover {
+  background-position:0 -18px;  
+}
+
+a.facebookIconFooter:hover {
+  background-position:-19px -18px;  
+}
+
+a.facebookIconFooter {
+  background:url(../graphics/icon_social_media_footer.png) no-repeat -19px 0;
+  height:18px;
+  width:19px;
+  display:block;
+  float:left;
+}
+
+a.twitterIconFooter span, a.facebookIconFooter span {
+  text-indent:-9999px;
+  display:block;
+}
+
+.popup {
+  position:absolute;
+  top:0;
+  background:url(../graphics/bg_social_media_popup.png) no-repeat 55px 71px;
+  height:105px;
+  color:#656464;
+}
+
+.popupContent {
+  background-color:#333333;
+  padding:15px;
+}
+
+.lightbg #footer .popupContent a:hover, .darkbg #footer .popupContent a:hover {
+  color:#666666;
+  text-decoration:underline;
+}
+
+.darkbg #footer .popupContent a {
+  color:#C73901;
+}
+
+#footer .popup p {
+  padding-bottom:2px;
+  margin-bottom:6px;
+  border-bottom:1px solid #656464;
+  color:#7C7C7C;
+}
+
+.bubbleInfo {
+    position:relative;
+}
+
+.twitterFeed {
+  position:relative;
+  min-height:87px;
+}
+
+.twitterContent {
+  width:285px;
+  padding:15px;
+  background-color:#333;
+}
+
+#footer ul.tweet_list {
+  padding-bottom:0; 
+}
+
+a.twitterBirds {
+  position:absolute;
+  right:5px;
+  top:-5px;
+  background:url(../graphics/icon_twitter_birds.png) no-repeat 0 0;
+  height:83px;
+  width:134px;
+  display:block;
+}
+
+a.twitterBirds:hover {
+  background-position:0 -82px;
+}
+
+a.twitterBirds span {
+  display:block;
+  text-indent:-9999px;
+}
+
+ul#footer_sm li a.facebook {
+  background: url(../graphics/logo_facebook02.gif) no-repeat 0 0;
+}
+ul#footer_sm li a.facebook:hover, ul#footer_sm li a.twitter:hover {
+  background-position: 0 -20px;
+}
+ul#footer_sm li a.facebook span, ul#footer_sm li a.twitter span {
+  display: none;
+}
+
+.footerServices {
+  color:#999;
+  letter-spacing:0;
+}
+
+
+/* = vcard, in base template
+--------------------------------------------------------------------------------*/
+
+.vcard {
+  text-indent:-99999px;
+  overflow:hidden;
+  display: none;
+}
+
+
+
+/* = jobs pop up
+--------------------------------------------------------------------------------*/
+
+body#jobs {
+  background:#fff;
+  padding:20px 20px 10px 20px;
+}
+#jobs p {
+  line-height:18px;
+  margin:0 0 10px 0;
+}
+#jobs h3 {
+  font:normal 18px arial;
+  color:#C24F16 !important;
+  margin:0 0 16px 0;
+}
+
+.testBorder {
+  border:1px solid red; 
+}

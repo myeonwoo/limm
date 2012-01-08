@@ -1,0 +1,171 @@
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+  
+  Based off of 960 Grid, but modified
+  Editor: Aubyn Freybe-Smith, Steve Saugestad (Wallop Creative)
+*/
+
+/* =For Testing
+--------------------------------------------------------------------------------*/
+
+.test_showborder {
+  border: 1px solid red;
+}
+
+.test_showgrid {
+  background:url(../graphics/testing/grid_12_984.gif) repeat-y;
+}
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 984px;
+  position: relative; /* in order to position the main nav absolutely */
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* =Grid >> Children (no_margin_left = First column, no_margin_right = Last column)
+--------------------------------------------------------------------------------*/
+
+.no_margin_left, .no_margin_horiz { margin-left: 0; }
+.no_margin_right, .no_margin_horiz { margin-right: 0; }
+
+/* =Grid >> 12 Columns
+--------------------------------------------------------------------------------*/
+
+.container_12 .grid_1 { width: 42px; }
+.container_12 .grid_2 { width: 124px; }
+.container_12 .grid_3 { width: 206px; }
+.container_12 .grid_4 { width: 288px; }
+.container_12 .grid_5 { width: 370px; }
+.container_12 .grid_6 { width: 452px; }
+.container_12 .grid_7 { width: 534px; }
+.container_12 .grid_8 { width: 616px; }
+.container_12 .grid_9 { width: 698px; }
+.container_12 .grid_10 { width: 780px; }
+.container_12 .grid_11 { width: 862px; }
+.container_12 .grid_12 { width: 944px; }
+
+
+
+/* =Prefix Extra Space >> 12 Columns
+--------------------------------------------------------------------------------*/
+
+.container_12 .prefix_1 { padding-left: 82px; }
+.container_12 .prefix_2 { padding-left: 164px; }
+.container_12 .prefix_3 { padding-left: 246px; }
+.container_12 .prefix_4 { padding-left: 328px; }
+.container_12 .prefix_5 { padding-left: 410px; }
+.container_12 .prefix_6 { padding-left: 492px; }
+.container_12 .prefix_7 { padding-left: 574px; }
+.container_12 .prefix_8 { padding-left: 656px; }
+.container_12 .prefix_9 { padding-left: 738px;  }
+.container_12 .prefix_10 { padding-left: 820px; }
+.container_12 .prefix_11 { padding-left: 902px; }
+.container_12 .prefix_12 { padding-left: 984px; }
+
+
+
+/* =Grid >> Children (Push and Pull columns)
+--------------------------------------------------------------------------------*/
+/* Use these classes on an element to push it into the 
+   next column, or to pull it into the previous column.  */
+
+.pull-1 { margin-left: -30px; }
+.pull-2 { margin-left: -60px; }
+.pull-3 { margin-left: -90px; }
+
+.pull-1, .pull-2, .pull-3 {
+  float:left;
+  position:relative;
+}
+
+.push-1 { margin: 0 -30px 0 30px; }
+.push-2 { margin: 0 -60px 0 60px; }
+.push-3 { margin: 0 -90px 0 90px; }
+
+.push-1, .push-2, .push-3 { 
+  float: right;
+  position:relative;
+}
+
+/* =Clear Floated Elements
+--------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear
+{
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.positioniseverything.net/easyclearing.html */
+
+.clearfix:after
+{
+  clear: both;
+  content: '.';
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix
+{
+  display: inline-block;
+}
+
+* html .clearfix
+{
+  height: 1%;
+}
+
+.clearfix
+{
+  display: block;
+}
+
+.padTop40 {
+  padding:40px 0 0; 
+}

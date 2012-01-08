@@ -1,0 +1,197 @@
+/*
+  print.css
+  
+  Editor: Aubyn Freybe-Smith, Steve Saugestad (Wallop)
+*/
+
+/* =Basic HTML
+--------------------------------------------------------------------------------*/
+
+body { 
+  font-family: Arial,sans-serif;
+  font-size: 10pt;
+  line-height: normal;
+}
+
+body a {
+  color: black;
+  text-decoration: none;
+}
+
+.noprint { display: none; }
+
+/* =Spacing
+--------------------------------------------------------------------------------*/
+
+ol { list-style: decimal; }
+
+ul {
+  list-style: circle;
+  margin-left: 15pt;
+}
+
+li {
+  padding-left: 2pt;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset
+{
+  margin-bottom: 15pt;
+}
+
+/* = Generic
+--------------------------------------------------------------------------------*/
+
+/* spacers. to be used on TDs, empty DIVs, even Ps, when vertical space is needed */
+.spacer20 {
+  padding: 0;
+}
+.spacer30 {
+  padding: 0;
+}
+
+hr
+{
+  border-color: #bfbdba;
+  border-style: solid;
+  border-width: 1pt 0 0;
+  clear: both;
+  height: 0;
+}
+
+img {
+  border: 2pt solid #bfbdba;
+}
+
+
+/* =Headings
+--------------------------------------------------------------------------------*/
+
+
+
+h1 { font-size: 20pt; clear: both; font-weight: normal; }
+h2 { font-size: 18pt; }
+h2.section_heading { font-size: 21pt; }
+h3 { font-size: 16pt; }
+h4 { font-size: 14pt; }
+h5 { font-size: 12pt; }
+h6 { font-size: 10pt; }
+
+
+/* =Grid Adjustments
+---------------------------------------------------------------------------------*/
+.container_12 {
+  width: auto;
+}
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  
+}
+
+/* =Header
+--------------------------------------------------------------------------------*/
+
+#header01 a#logo_wallop {
+  font-size: 24pt;
+  text-decoration: none;
+  font-weight: bold;
+}
+#header01 #contact_btn {
+  display: none;
+}
+
+
+/* = nav
+--------------------------------------------------------------------------------*/
+
+#nav { display: none; }
+
+
+
+/* = footer
+--------------------------------------------------------------------------------*/
+
+#footer {
+  border-top: solid 1pt black;
+  padding-top: 10pt;
+  margin-top: 20pt;
+}
+
+#footer ul {
+  list-style: disc;
+}
+
+
+/* = misc
+--------------------------------------------------------------------------------*/
+
+#breadcrumbs {
+  font-size: 8pt;
+  font-weight: italic;
+}
+
+div.vcard {
+  display: none;
+}
+
+.pager {
+  display: none;
+}
+
+.lightbg h2.section_heading span { /* targets the "there's lots more! go" text on the homepage, beside the h2 "our work" */
+  display: none;
+} 
+
+#tags { display: none; }
+
+.services_list_legend { 
+  display: none;
+}
+
+.services_list .no, .services_list .no_p, .services_list .yes, .services_list .yes_p {
+  border-top: solid 1pt #999;
+  padding-top: 5pt;
+  margin-bottom: 2pt;
+}
+
+p.article_caption {
+  font-size:8pt;
+  font-style:italic;
+  line-height:14px;
+  margin-top:-12pt;
+}
+
+#article_signup h2, form {
+  display: none;
+}
+
+div.case_study_ss img {
+  padding-bottom: 5pt;
+  border: none;
+  
+}

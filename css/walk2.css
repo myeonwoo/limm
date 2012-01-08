@@ -1,0 +1,307 @@
+/*******************
+ **** Body tag ****
+*******************/
+
+body.lightbg #main_wrap {
+    background: url("../graphics/bg_body_lightbg_top01.gif") repeat-y scroll center top #FEFEFC;
+}
+/* screen.css (line 34) */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+/* reset.css (line 4) 
+Inherited frombody.lightbg*/
+
+.lightbg {
+    color: #222222;
+}
+/* screen.css (line 877) */
+
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1;
+}
+/* screen.css (line 22) 
+
+body {
+    line-height: 1;
+}
+/* reset.css (line 21) */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font-size: 100%;
+}
+/* reset.css (line 4) 
+Inherited fromhtml*/
+
+
+
+
+/*****************************
+ **** div id="headerWrap" ****
+*****************************/
+.lightbg #headerWrap {
+    background: url("../graphics/top_rule_bg.gif") repeat-x scroll 0 89px transparent;
+}
+/* screen.css (line 315) */
+
+/* 
+reset.css (line 4) 
+reset.css (line 4)
+screen.css (line 877)
+screen.css (line 22) 
+reset.css (line 21)
+reset.css (line 4)
+reset.css (line 4)
+*/
+
+/*****************************
+ **** div id="header01" ****
+*****************************/
+.lightbg #header01 {
+    background: url("../graphics/bg_grid_lightbg01.gif") repeat-y scroll 0 0 transparent;
+}
+/* screen.css (line 343) */
+
+#header01 {
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    width: 984px;
+}
+/* screen.css (line 334) */
+
+
+/*********************************************************************
+ **** div class="grid_12 no_margin_horiz innerHeadRule" ****
+*********************************************************************/
+.innerHeadRule {
+    background: url("../graphics/top_rule_bg.gif") repeat-x scroll 0 89px transparent;
+    height: 100px;
+    padding-left: 20px;
+    width: 100%;
+}
+/* screen.css (line 323) */
+
+
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.no_margin_right, .no_margin_horiz {
+    margin-right: 0;
+}
+/* 984.css (line 57) */
+
+.no_margin_left, .no_margin_horiz {
+    margin-left: 0;
+}
+/* 984.css (line 56) */
+/* 984.css (line 35) */
+/*
+reset.css (line 4)
+screen.css (line 877)
+screen.css (line 22)
+reset.css (line 21)
+reset.css (line 4)
+reset.css (line 4) */
+
+/*********************************************************************
+ **** div class="clearboth" ****
+*********************************************************************/
+.clearboth {
+    clear: both;
+}
+/* screen.css (line 103) 
+
+reset.css (line 4)
+screen.css (line 877)
+screen.css (line 22)
+reset.css (line 21)
+*/
+
+/*********************************************************************
+ **** a tag id="logo_wallop" ****
+*********************************************************************/
+.lightbg #header01 a#logo_wallop {
+    background: url("../graphics/logo_wallop_lightbg01.gif") no-repeat scroll 0 0 transparent;
+}
+/* screen.css (line 359) */
+#header01 a#logo_wallop {
+    display: block;
+    height: 48px;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    width: 148px;
+}
+/* screen.css (line 347) */
+.darkbg a, .lightbg a {
+    color: #B53300;
+    text-decoration: none;
+}
+/* screen.css (line 885) */
+
+/*
+reset.css (line 4)
+screen.css (line 906)
+reset.css (line 4)
+screen.css (line 22)
+reset.css (line 21)
+*/
+
+/*********************************************************************
+ **** a tag id="contact_btn" id="jobs_btn" ****
+*********************************************************************/
+.lightbg #header01 a#contact_btn, .darkbg #header01 a#contact_btn {
+    background: url("../graphics/btn_contact.png") no-repeat scroll 0 0 transparent;
+}
+/* screen.css (line 440) */
+a#contact_btn {
+    background-color: transparent;
+    color: #95908D;
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    height: 26px;
+    left: 738px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    top: -15px;
+    width: 77px;
+}
+/* screen.css (line 384) */
+.lightbg #header01 a#contact_btn:hover, .darkbg #header01 a#contact_btn:hover {
+  background-position:0 -26px;
+}
+/* screen.css (line 452) */
+#header01 a#logo_wallop:hover {
+  background-position: 0 -48px;
+}
+/* screen.css (line 362) */
+/*
+screen.css (line 885)
+reset.css (line 4)
+screen.css (line 877)
+screen.css (line 22)
+reset.css (line 21)
+*/
+
+.lightbg #header01 a#jobs_btn, .darkbg #header01 a#jobs_btn {
+    background: url("../graphics/btn_contact.png") no-repeat scroll -77px 0 transparent;
+}
+/* screen.css (line 444) */
+a#jobs_btn {
+    background-color: transparent;
+    color: #95908D;
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    height: 26px;
+    left: 815px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    top: -41px;
+    width: 70px;
+}
+/* screen.css (line 401) */
+.lightbg #header01 a#jobs_btn:hover, .darkbg #header01 a#jobs_btn:hover {
+  background-position:-77px -26px;  
+}
+/* screen.css (line 456) */
+/*
+screen.css (line 885)
+reset.css (line 4)
+screen.css (line 877)
+screen.css (line 22)
+reset.css (line 21)
+*/
+
+
+/*********************************************************************
+ **** P tag ****
+*********************************************************************/
+p {
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+/* screen.css (line 906) */
+p, dl, ol, ul, hr, h1, h2, h3, h4, h5, h6, pre, table, address, fieldset {
+}
+/* screen.css (line 84) */
+
+/*
+reset.css (line 4)
+screen.css (line 877)
+screen.css (line 22)
+reset.css (line 21)
+*/
+
+/*********************************************************************
+ **** span tag ****
+*********************************************************************/
+#header01 a#logo_wallop span {
+    display: none;
+}
+/* screen.css (line 365) */
+/* 
+reset.css (line 4)
+screen.css (line 885)
+reset.css (line 4)
+screen.css (line 906)
+reset.css (line 4)
+screen.css (line 877)
+screen.css (line 22)
+reset.css (line 21)
+*/
+
+a#contact_btn span, a#jobs_btn span, a#subscribe_btn span {
+    display: block;
+    text-indent: -9999px;
+}
+/* screen.css (line 435) */ 
+/*
+reset.css (line 4)
+screen.css (line 384)
+screen.css (line 885)
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

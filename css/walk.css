@@ -1,0 +1,539 @@
+
+
+/* = Generic
+--------------------------------------------------------------------------------*/
+
+.floatleft { float: left; }
+.floatright { float: right; }
+.clearleft { clear: left; }
+.clearright { clear: right; }
+.clearboth { clear: both; }
+.textcenter { text-align: center; }
+.textright { text-align: right; }
+.textleft { text-align: left; }
+.blue { color: #09375c; }
+
+/* spacers. to be used on TDs, empty DIVs, even Ps, when vertical space is needed */
+.spacer5 { padding-top: 5px; }
+.spacer7 { padding-top: 7px; }
+.spacer10 { padding-top: 10px; }
+.spacer20 { padding-top: 20px; }
+.spacer30 { padding-top: 30px; }
+.spacer40 { padding-top: 40px; }
+.spacer50 { padding-top: 50px; }
+.spacer60 { padding-top: 60px; }
+.spacer70 { padding-top: 70px; }
+.spacer80 { padding-top: 80px; }
+
+
+/********************************************
+	Body Main Header Part
+********************************************/
+#header01 {
+  height:100px;
+  margin:0 auto;
+  width:984px;
+  position: relative;
+}
+.lightbg #headerWrap {
+  background:url(../graphics/top_rule_bg.gif) repeat-x 0 89px;
+}
+
+.darkbg #headerWrap {
+  background:url(../graphics/top_rule_bg_dark.gif) repeat-x 0 89px;
+}
+
+#header01 {
+  height:100px;
+  margin:0 auto;
+  width:984px;
+  position: relative;
+}
+.darkbg #header01 {
+  background: url(../graphics/bg_grid_darkbg01.gif) repeat-y 0 0;
+}
+.lightbg #header01 {
+  background: url(../graphics/bg_grid_lightbg01.gif) repeat-y 0 0;
+}
+
+/* Logo */
+#header01 a#logo_wallop {
+  display: block;
+  height: 48px;
+  width: 148px;
+  position: absolute;
+  top: 50px;
+  padding:0;
+  z-index:500px;
+}
+.darkbg #header01 a#logo_wallop {
+  background: url(../graphics/logo_wallop_darkbg01.gif) no-repeat 0 0;
+}
+.lightbg #header01 a#logo_wallop {
+  background: url(../graphics/logo_wallop_lightbg01.gif) no-repeat 0 0;
+}
+#header01 a#logo_wallop:hover {
+  background-position: 0 -48px;
+}
+#header01 a#logo_wallop span {
+  display: none;
+}
+
+/* Buttons */
+a#contact_btn {
+  display: block;
+  height: 26px;
+  width: 77px;
+  position:relative;
+  top:-15px;
+  left:738px;
+  margin: 0;
+  padding:0;
+  background-color: transparent;
+  font-weight:800;
+  color:#95908d;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:11px;
+}
+a#jobs_btn {
+  display: block;
+  height: 26px;
+  width: 70px;
+  position:relative;
+  top:-41px;
+  left:815px;
+  margin: 0;
+  padding:0;
+  background-color: transparent;
+  font-weight:800;
+  color:#95908d;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:11px;
+}
+a#subscribe_btn {
+  display: block;
+  height: 26px;
+  width: 78px;
+  position:relative;
+  top:-67px;
+  left:885px;
+  margin: 0;
+  padding:0;
+  background-color: transparent;
+  font-weight:800;
+  color:#95908d;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:11px;
+}
+a#contact_btn span, a#jobs_btn span, a#subscribe_btn span {
+  text-indent:-9999px;
+  display:block;
+}
+.lightbg #header01 a#contact_btn, .darkbg #header01 a#contact_btn  {
+  background:url(../graphics/btn_contact.png) no-repeat 0 0;
+}
+.lightbg #header01 a#jobs_btn, .darkbg #header01 a#jobs_btn {
+  background:url(../graphics/btn_contact.png) no-repeat -77px 0;
+}
+.lightbg #header01 a#subscribe_btn, .darkbg #header01 a#subscribe_btn {
+  background:url(../graphics/btn_contact.png) no-repeat -147px 0;
+}
+.lightbg #header01 a#contact_btn:hover, .darkbg #header01 a#contact_btn:hover {
+  background-position:0 -26px;
+}
+.lightbg #header01 a#jobs_btn:hover, .darkbg #header01 a#jobs_btn:hover {
+  background-position:-77px -26px;  
+}
+.lightbg #header01 a#subscribe_btn:hover, .darkbg #header01 a#subscribe_btn:hover {
+  background-position:-147px -26px; 
+}
+
+
+/********************************************
+	Body Main Container Part
+********************************************/
+body.darkbg div.container_12 {
+  background: url(../graphics/bg_grid_darkbg01.gif) repeat-y center top;
+}
+body.lightbg #main_wrap div.container_12 {
+  background: url(../graphics/bg_grid_lightbg01.gif) repeat-y center top;
+}
+
+
+
+.padTop40 {
+  padding:40px 0 0; 
+}
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 984px;
+  position: relative; /* in order to position the main nav absolutely */
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* =Grid >> 12 Columns
+--------------------------------------------------------------------------------*/
+
+.container_12 .grid_1 { width: 42px; }
+.container_12 .grid_2 { width: 124px; }
+.container_12 .grid_3 { width: 206px; }
+.container_12 .grid_4 { width: 288px; }
+.container_12 .grid_5 { width: 370px; }
+.container_12 .grid_6 { width: 452px; }
+.container_12 .grid_7 { width: 534px; }
+.container_12 .grid_8 { width: 616px; }
+.container_12 .grid_9 { width: 698px; }
+.container_12 .grid_10 { width: 780px; }
+.container_12 .grid_11 { width: 862px; }
+.container_12 .grid_12 { width: 944px; }
+
+
+
+/* =Prefix Extra Space >> 12 Columns
+--------------------------------------------------------------------------------*/
+
+.container_12 .prefix_1 { padding-left: 82px; }
+.container_12 .prefix_2 { padding-left: 164px; }
+.container_12 .prefix_3 { padding-left: 246px; }
+.container_12 .prefix_4 { padding-left: 328px; }
+.container_12 .prefix_5 { padding-left: 410px; }
+.container_12 .prefix_6 { padding-left: 492px; }
+.container_12 .prefix_7 { padding-left: 574px; }
+.container_12 .prefix_8 { padding-left: 656px; }
+.container_12 .prefix_9 { padding-left: 738px;  }
+.container_12 .prefix_10 { padding-left: 820px; }
+.container_12 .prefix_11 { padding-left: 902px; }
+.container_12 .prefix_12 { padding-left: 984px; }
+
+/** Navigation **/
+ul#nav {
+  width: 186px;
+  padding-left: 20px;
+  position: absolute;
+  /*top: 185px;*/
+  top:42px;
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  /* border: solid 1px green; */
+}
+ul#nav.scroll {
+  position: fixed;
+}
+ul#nav a {
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0;
+}
+ul#nav li {
+  list-style-type: none;
+  padding-left: 12px;
+  margin-bottom: 8px;
+}
+ul#nav ul { /* for subnav list */
+  padding-top: 8px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+ul#nav ul li {
+  background-image: none !important; /* hides arrow graphic on subnav (case study links) */
+}
+
+.darkbg ul#nav a { color: #e34000; }
+.lightbg ul#nav a { color: #c73901; }
+.darkbg ul#nav a:hover { color: #fff; }
+.lightbg ul#nav a:hover { color: #8c8874; }
+.darkbg ul#nav ul a { color: #bbb; } /* for subnav links */ 
+.lightbg ul#nav ul a { color: #262520; } /* for subnav links */
+
+.darkbg ul#nav li {
+  color: #fff;
+  background: url(../graphics/bullet_nav_single_ondark.gif) no-repeat 0px 5px;
+}
+.lightbg ul#nav li {
+  color: #222;
+  background: url(../graphics/bullet_nav_single_onlight.gif) no-repeat 0px 5px;
+}
+.darkbg ul#nav li.nav_active {
+  background: url(../graphics/bullet_nav_double_ondark.gif) no-repeat 0px 5px;
+}
+.lightbg ul#nav li.nav_active {
+  background: url(../graphics/bullet_nav_double_onlight.gif) no-repeat 0px 5px;
+}
+.darkbg ul#nav li.nav_reversebullet { /* for "back to main page" in 'hospitality' */
+  background-image: url(../graphics/bullet_nav_single_rev_ondark.gif);
+  font-style: italic;
+}
+ul#nav li.nav_nobullet { /* for 'hospitality' text */
+  background: none;
+  color: #555;
+  font-style: italic;
+}
+ul#nav li.nav_nobullet a {
+  color: #666;
+}
+
+
+/* wraps around contact box that opens at tops of each page, when click 'contact' */
+/** Contact Box **/
+#contact_box {
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+}
+#contact_box form p { }
+#contact_box form label { }
+#contact_box form input, #contact_box form textarea {
+  width: 188px; /* padding + width + border must <= 200 */
+}
+#contact_box form input { }
+#contact_box form textarea {
+  height: 100px;
+}
+#contact_box form .checkbox { }
+#contact_box form input.send_btn {
+  margin-top: 5px;
+}
+#contact_box .line_left { /* used to separate the text contact info from the form */
+  padding-left: 40px;
+  height: 235px;
+}
+.darkbg #contact_box .line_left { /* used to separate the text contact info from the form */
+  border-left: 1px solid #444;
+}
+.lightbg #contact_box .line_left { /* used to separate the text contact info from the form */
+  border-left: 1px solid #aaa;
+}
+#contact_box ul.errorlist { }
+#contact_box ul.errorlist li { }
+
+/** section_heading **/
+/* h2 are for section titles, ie "case studies" -- use outside of a grid col wrapper (ie grid_6) */
+h2.section_heading { 
+  line-height: 1.1; /* since this type of h2 has no padding-bottom, 1.1 helps prevent the bottom of characters from being cut off in ie6,7 */
+}
+.darkbg h2.section_heading { 
+  background: url(../graphics/bg_1pxline_darkbg01.gif) repeat-x 0 20px;
+  padding-left: 20px;
+  /* color: #3a83b0;  blue */
+}
+.lightbg h2.section_heading { 
+  /*background: url(../graphics/bg_1pxline_lightbg01.gif) repeat-x 0 20px;*/
+  padding-left: 20px;
+  color:#6A6244;
+  font-weight:normal;
+  /* color: #3a83b0;  blue */
+}
+.lightbg h5.section_heading_home{
+  padding-left: 20px;
+  color:#6A6244;
+  font-weight:bold;
+}
+.lightbg h2.section_heading span { /* targets the "there's lots more! go" text on the homepage, beside the h2 "our work" */
+  font-size: 18px;
+  color: #7e7e7e;
+  padding-left: 20px;
+} 
+.lightbg #secondary_wrap h2.section_heading { 
+  background: url(../graphics/bg_1pxline_wallpaperbg01.gif) repeat-x 0 20px;
+  color: #2e628d; /* darker blue */
+}
+h2.section_heading.skinny {
+  width: 698px;
+  font-weight:100;
+}
+.paper h2.section_heading, .paper2 h2.section_heading {
+  width: auto;
+  font-size: 26px;
+  letter-spacing: -1.4px;
+  background: url(../graphics/bg_1pxline_darkbg01.gif) repeat-x 0 37px;
+  padding-bottom: 20px;
+  color: #111;
+  line-height: 1; /* resets back to 1, since the more general h2.section_heading class sets it to 1.1 */
+}
+h2.tContact {
+  background:url(../graphics/t_contact.png) no-repeat 0 0;
+  width:451px;
+  height:42px;
+  margin-left:20px;
+}
+.darkbg h2.tContact {
+  background:url(../graphics/t_contact_darkbg.png) no-repeat 0 0;
+  width:451px;
+  height:42px;
+  margin-left:20px;
+}
+h2.tContact span {
+  display:block;
+  text-indent:-9999px;
+}
+
+/** subscribe_box **/
+#subscribe_box {
+  margin-bottom:20px;
+  padding-bottom:25px;
+  /*background:url(../graphics/bg_1pxline_lightbg02.gif) no-repeat left bottom;*/
+}
+#subscribe_box #article_signup {
+  margin-top:0;
+}
+/* wraps around small form to sign up for articles, at bottom of each article */
+#article_signup {
+  margin-top: 50px;
+}
+#subscribe_box #article_signup {
+  margin-top:0;
+}
+#article_signup form input {
+  width: 188px; /* padding + width + border must <= 200 */
+}
+#article_signup form input.send_btn {
+  /*margin-left: 59px;*/
+  margin-top: 14px;
+}
+/*Hides the form loading icon*/
+
+
+
+h2.tSubscribe {
+  background:url(../graphics/t_subscribe.png) no-repeat 0 0;
+  width:263px;
+  height:21px;
+  margin:0 0 3px 20px;
+}
+.darkbg h2.tSubscribe {
+  background:url(../graphics/t_subscribe.png) no-repeat 0 -21px;
+  width:263px;
+  height:21px;
+  margin:0 0 3px 20px;
+}
+h2.tSubscribe span {
+  display:block;
+  text-indent:-9999px;
+}
+
+/* generic styling for forms, v1 */
+.form_style01 p { }
+.form_style01 label { }
+.form_style01 input, .form_style01 textarea {
+  font-family: Arial,sans-serif;
+  font-size: 15px;
+  border: 1px solid #aaa;
+}
+.darkbg .form_style01 input, .darkbg .form_style01 textarea {
+  background-color: #ffffff!important; /* mid blue */
+  color: #eee;
+}
+.lightbg .form_style01 input, .lightbg .form_style01 textarea {
+  background-color: #ffffff!important; /* light blue */
+  color: #000;
+}
+.form_style01 input {
+  height: 20px; 
+  padding: 4px 5px 1px 5px;
+}
+.form_style01 textarea {
+  padding: 5px;
+  font-size: 13px;
+}
+.form_style01 .checkbox {
+  background: none!important;
+  border: none;
+  height: 15px;
+  width: 15px !important;
+  padding: 0;
+}
+.form_style01 input.send_btn {
+  height: 39px;
+  width: 90px !important;
+  padding: 0;
+  border: none;
+  background: none!important;
+
+}
+.form_style01 ul.errorlist {
+  padding: 0;
+  margin: 0;
+}
+.form_style01 ul.errorlist li {
+  list-style-type: none;
+  margin: 0;
+  color: #ff0000;
+}
+
+
+.homeBlurb {
+  font-size:29px;
+  color:#6A6244;
+  letter-spacing:.5px;
+  font-weight:200;
+}
+
+.blurbOne {
+  background:url(../graphics/t_homeBlurb_1.png) no-repeat 0 0;
+  height:68px;
+  width:687px;
+} 
+
+a.blurbTwo {
+  background:url(../graphics/t_homeBlurb_2.png) no-repeat 0 0;
+  height:29px;
+  width:695px;
+  margin-top:4px;
+  display:block;
+} 
+
+a.blurbTwo:hover {
+  background-position:0 -29px;
+} 
+
+.homeBlurb span {
+  display:block;
+  text-indent:-9999px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
