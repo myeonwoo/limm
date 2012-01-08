@@ -32,6 +32,7 @@
     <?php
             if(isset($is_logged_in)){
                 echo 'You are login.';
+                echo "<a href='". base_url()."index.php/main/home/logout'>Logout</a>";
             } else {
                 echo form_open('main/home');
                 echo ' User Name  ';
@@ -43,7 +44,6 @@
                 echo form_close();
             }
         ?>
-	  <a href='http://web.cecs.pdx.edu/~limm/invite/index.php/main/home/logout'>Logout</a>
 </div>
 
 <div class="main">

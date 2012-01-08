@@ -11,7 +11,27 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://web.cecs.pdx.edu/~limm/invite/";
+switch($_SERVER['HTTP_HOST'])
+{
+    case 'localhost':
+        $config['base_url'] = "http://localhost/limm/";
+        break;
+
+    case 'web.cecs.pdx.edu':
+        $config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
+        $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),
+                                           "", $_SERVER['SCRIPT_NAME']);
+        break;
+
+    case 'wim.its.pdx.edu':
+        $config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
+        $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),
+                                           "", $_SERVER['SCRIPT_NAME']);
+        $config['site'] = "wim";
+        break;
+}
+
+//$config['base_url']	= "http://web.cecs.pdx.edu/~limm/invite/";
 
 $config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
 /*
