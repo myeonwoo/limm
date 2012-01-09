@@ -12,7 +12,7 @@ def main():
     
     #===========================================================================
     # Option:        -thumb 
-    # Description:   
+    # Description:   It's making thumb-images
     # Usage example: python util.py -thumb lim01
     #===========================================================================
     (success, index) = checkElement(sys.argv, '-thumb')
@@ -21,36 +21,6 @@ def main():
         createThumb(optionValue)
         
             
-    #===========================================================================
-    # Option:        -report
-    # Description:
-    # Usage example: python loopdataUtil.py -report loopdata -date 2011-09-01
-    #===========================================================================
-    (success, index) = checkElement(sys.argv, '-report')
-    if success:
-        optionValue = sys.argv[index+1]
-        pattern = re.compile('^loopdata$')
-        match = re.search(pattern, optionValue)
-        if match: cate = optionValue
-        else: success = False
-    
-    if success: (success, index) = checkElement(sys.argv, '-date')
-    if success:
-        # Check regular expression of date
-        optionValue = sys.argv[index+1]
-        pattern = re.compile('^(19|20)\d\d[-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])$')
-        match = re.search(pattern, optionValue)
-        if match:
-            tableDate = re.sub('[-]', '_', optionValue)
-            year,month,day = optionValue.split('-')
-            curDate = date(int(year),int(month),int(day))
-        else: success = False
-        
-    if success:
-        mydb = loopdataDb.myPsycopg2()
-        mydb.reportDetectorWithNodata(tableDate, curDate)
-        sys.exit()
-        
     
 def createThumb(path):
     path = path+'/'
