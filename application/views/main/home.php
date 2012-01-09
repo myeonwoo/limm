@@ -29,21 +29,6 @@
       
       <div class="clr"></div>
     </div>
-    <?php
-            if(isset($is_logged_in)){
-                echo 'You are login.';
-                echo "<a href='". base_url()."index.php/main/home/logout'>Logout</a>";
-            } else {
-                echo form_open('main/home');
-                echo ' User Name  ';
-                echo form_input('username', '');
-                echo ' Password  ';
-                echo form_password('password', '');
-                echo form_submit('submit', 'Login');
-                echo anchor('login/signup', 'Create Account');
-                echo form_close();
-            }
-        ?>
 </div>
 
 <div class="main">
@@ -75,6 +60,21 @@
       </div>
       
       <div class="sidebar">
+      	<?php
+            if(isset($is_logged_in)){
+                echo 'You are login.';
+                echo "<a href='". base_url()."index.php/main/home/logout'>Logout</a>";
+            } else {
+                echo form_open('main/home');
+                echo form_input('username', '');
+                echo ' User Name  ';
+                echo form_password('password', '');
+                echo ' Password  ';
+                echo form_submit('submit', 'Login');
+                echo anchor('login/signup', 'Create Account');
+                echo form_close();
+            }
+        ?>
         <div class="searchform">
           <form id="formsearch" name="formsearch" method="post" action="#">
             <span>

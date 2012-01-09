@@ -12,6 +12,7 @@ class Blog extends Controller {
         $this->data['heading'] = "My Blog Heading";
         $this->data['content'] = 'main/blog_view';
         $this->data['query'] = $this->db->get('entries');
+        $this->data['temp'] = "kkkk";
         $this->uri_args = $this->uri->uri_to_assoc();
     }
 
