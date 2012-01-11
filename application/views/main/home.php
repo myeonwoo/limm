@@ -21,7 +21,7 @@
       <div class="menu_nav">
         <ul>
           <li class="active"><a href="<?php echo base_url(); ?>index.php/main/home">Home</a></li>
-          <li><a href="<?php echo base_url(); ?>index.php/main/aboutme">About me</a></li>
+          <li><a href="<?php echo base_url(); ?>index.php/resume">About me</a></li>
           <li><a href="<?php echo base_url(); ?>index.php/main/blog">Blog</a></li>
           <li><a href="<?php echo base_url(); ?>index.php/main/picture">Pictures</a></li>
         </ul>

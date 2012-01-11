@@ -17,12 +17,12 @@
       <div class="menu_nav">
         <ul>
           <?php 
-              $tabs = array('home','aboutme','blog','pictures');
-              foreach ($tabs as $tab){
-                  if($whichpage == $tab)
-                      echo '<li class="active"><a href="'. base_url().'index.php/main/'.$tab.'">'.$tab.'</a></li>';
+              $tabs = array('main/home'=>'Home','resume'=>'About Me','main/blog'=>'Blog','main/pictures'=>'Pictures');
+              foreach ($tabs as $key=>$value){
+                  if($whichpage == $key)
+                      echo '<li class="active"><a href="'. base_url().'index.php/'.$key.'">'.$value.'</a></li>';
                   else
-                      echo '<li><a href="'. base_url().'index.php/main/'.$tab.'">'.$tab.'</a></li>';
+                      echo '<li><a href="'. base_url().'index.php/'.$key.'">'.$value.'</a></li>';
               }
           ?>
         </ul>
