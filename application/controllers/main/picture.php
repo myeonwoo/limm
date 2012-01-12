@@ -13,7 +13,7 @@ class Picture extends Controller {
 	
     function index()
     {
-        $this->display('lim01');
+        $this->display('MeAndPeople');
     }
     
     function display($folder){
