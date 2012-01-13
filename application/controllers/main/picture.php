@@ -40,13 +40,13 @@ class Picture extends Controller {
         
                 $thumburl = "images/picture/".$folder."/thumb/" . $value;
                 $row = array("url"=>$imageurl,"thumb"=>$thumburl);
-        
                 $urls[] = $row;
             }
         }
         $data['urls'] = $urls;
         
-        $mypath = BASEPATH.'../images/picture';
+        $mypath = getcwd().'/images/picture';
+        //$mypath = BASEPATH.'../images/picture';
         $data['files'] = directory_map($mypath);
         
         $this->load->view('main/picture',$data);

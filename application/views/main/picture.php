@@ -28,15 +28,11 @@
 
 		var files = <?php echo json_encode($files); ?>;
 		  var list = $('<ul>').appendTo( $('#picture_links'));
-		  
+		  list = $('.picture_links');
 		  for(x in files){
 			  if (typeof files[x] == "object") {
-				  var li = $('<li>').appendTo(list).addClass('folder');
-
 				  var url = "<?php echo base_url(); ?>index.php/main/picture/display/"+x;
-					
-				  var span = $('<a href="' + url + '">').html(x).appendTo( li);
-		    
+				  list.append('<li class="folder"><a href="'+url+'">'+x+'</a></li>');
 			  }
 
 		  }
@@ -83,7 +79,9 @@
         	
           <h2 class="star">Picture List</h2>
           <div class="clr"></div>
-          <div class="folder" id="picture_links"> </div>
+          <div class="folder">
+          	<ul class="picture_links"></ul>
+          </div>
           
           <br />
           <h2 class="star"><span>Sidebar</span> Menu</h2>
