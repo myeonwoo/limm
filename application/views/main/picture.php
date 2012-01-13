@@ -33,7 +33,7 @@
 			  if (typeof files[x] == "object") {
 				  var li = $('<li>').appendTo(list).addClass('folder');
 
-				  var url = "<?php echo base_url(); ?>/index.php/main/picture/display/"+x;
+				  var url = "<?php echo base_url(); ?>index.php/main/picture/display/"+x;
 					
 				  var span = $('<a href="' + url + '">').html(x).appendTo( li);
 		    

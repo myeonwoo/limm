@@ -14,6 +14,15 @@ class Picture extends Controller {
     function index()
     {
         $this->display('MeAndPeople');
+        
+        return;
+        $mypath = BASEPATH.'../images/picture/';
+        return 'fdf'.$mypath;
+        $path = getcwd(); // /u/limm/public_html/limm
+        $url = base_url(); // http://web.cecs.pdx.edu/~limm/limm/
+        echo $path.'images/picture'.'MeAndPeople'.'/thumb/';
+        
+        
     }
     
     function display($folder){
