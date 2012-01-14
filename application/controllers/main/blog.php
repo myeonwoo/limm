@@ -6,13 +6,12 @@ class Blog extends Controller {
         parent::Controller();
         $this->is_logged_in();
         //$this->load->scaffolding('entries');
+        $this->data['content'] = 'main/blog_view';
+        $this->data['whichpage'] = "Blog";
         
-        $this->data['whichpage'] = "blog";
         $this->data['title'] = "My blog Title";
         $this->data['heading'] = "My Blog Heading";
-        $this->data['content'] = 'main/blog_view';
         $this->data['query'] = $this->db->get('entries');
-        $this->data['temp'] = "kkkk";
         $this->uri_args = $this->uri->uri_to_assoc();
     }
 

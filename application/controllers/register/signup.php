@@ -9,7 +9,7 @@ class Signup extends Controller {
     }
     
     public function index() {
-        $this->load->view('signup_form');
+        $this->load->view('register/signup_form');
     }
     
     public function submit(){
@@ -18,6 +18,16 @@ class Signup extends Controller {
             return;
         }
         
+        /*
+         * TODO: insert the user to database
+         * 
+         * Use Doctrine library
+         */
+            $u = new User3();
+            $u->username = $this->input->post('username');
+            $u->password = $this->input->post('password');
+            $u->email = $this->input->post('email');
+            $u->save();
         
         $data['message'] = 'Your acount was created!';
         $this->load->view('display_message',$data);

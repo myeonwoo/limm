@@ -32,7 +32,7 @@ class Login extends Controller {
   
   function signup()
   {
-    $this->load->view('signup_form');
+    $this->load->view('register/signup_form');
   }
   
   function create_member()

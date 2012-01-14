@@ -13,9 +13,10 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>css/psu/jquery.mousewheel-3.0.4.pack.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>css/psu/jquery.fancybox-1.3.4.pack.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/psu/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
 <script type="text/javascript">
 	$(document).ready(function() {
-		$("a.a").fancybox();
+		//$("a.a").fancybox();
 		$("a[rel=example_group]").fancybox({
 			'transitionIn'		: 'none',
 			'transitionOut'		: 'none',
@@ -25,7 +26,6 @@
 			}
 		});
 		
-
 		var files = <?php echo json_encode($files); ?>;
 		  var list = $('<ul>').appendTo( $('#picture_links'));
 		  list = $('.picture_links');

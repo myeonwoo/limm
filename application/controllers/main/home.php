@@ -5,10 +5,19 @@ class Home extends Controller {
     function __construct()
     {
         parent::Controller();
+        
+        $this->data['content'] = 'main/home_view';
+        $this->data['whichpage'] = "Home";
+        
+        $this->data['title'] = "Home Page";
+        $this->data['heading'] = ".......";
+        $this->uri_args = $this->uri->uri_to_assoc();
     }
 	
 	function index()
 	{
+	    $data =& $this->data;
+	    
 	    $is_logged_in = $this->session->userdata('is_logged_in');
 	    if ($is_logged_in){
 	        $username = $this->session->userdata('username');
@@ -18,7 +27,6 @@ class Home extends Controller {
 	    if(!$is_logged_in){
 	        $this->load->model('membership_model');
 	        $query = $this->membership_model->validate();
-	        $data = array();
 	        if($query) // if the user's credentials validated...
 	        {
 	            $data['username'] = $this->input->post('username');
@@ -27,7 +35,7 @@ class Home extends Controller {
 	        } 
 	    }
 	    
-		$this->load->view('main/home',$data);
+		$this->load->view('main/template/include',$data);
 	}
 	
 	function logout()

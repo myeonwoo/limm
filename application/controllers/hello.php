@@ -9,14 +9,14 @@ class Hello extends Controller {
 
 	function user_test() {
 
-		$u = new User;
+		$u = new User2;
 		$u->username = 'johndoe';
 		$u->password = 'secret';
 		$u->first_name = 'John';
 		$u->last_name = 'Doe';
 		$u->save();
 
-		$u2 = new User;
+		$u2 = new User2;
 		$u2->username = 'phprocks';
 		$u2->password = 'mypass';
 		$u2->first_name = 'Codeigniter';

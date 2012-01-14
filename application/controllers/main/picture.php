@@ -9,23 +9,18 @@ class Picture extends Controller {
         $this->load->helper('download');
         $this->load->helper('directory');
         $this->load->helper('url');
+        
     }
 	
     function index()
     {
         $this->display('MeAndPeople');
         
-        return;
-        $mypath = BASEPATH.'../images/picture/';
-        return 'fdf'.$mypath;
-        $path = getcwd(); // /u/limm/public_html/limm
-        $url = base_url(); // http://web.cecs.pdx.edu/~limm/limm/
-        echo $path.'images/picture'.'MeAndPeople'.'/thumb/';
-        
-        
     }
     
     function display($folder){
+        $data =& $this->data;
+        
         $mypath = BASEPATH.'../images/picture/'.$folder;
         
         $files = directory_map($mypath);

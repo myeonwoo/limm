@@ -9,6 +9,7 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>js/main/cuf_run.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/main/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/main/radius.js"></script>
+
 </head>
 <body>
 
@@ -17,9 +18,9 @@
       <div class="menu_nav">
         <ul>
           <?php 
-              $tabs = array('main/home'=>'Home','resume'=>'About Me','main/blog'=>'Blog','main/pictures'=>'Pictures');
+              $tabs = array('main/home'=>'Home','resume'=>'About Me','main/blog'=>'Blog','main/picture'=>'Picture');
               foreach ($tabs as $key=>$value){
-                  if($whichpage == $key)
+                  if($whichpage == $value)
                       echo '<li class="active"><a href="'. base_url().'index.php/'.$key.'">'.$value.'</a></li>';
                   else
                       echo '<li><a href="'. base_url().'index.php/'.$key.'">'.$value.'</a></li>';
