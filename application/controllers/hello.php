@@ -9,21 +9,17 @@ class Hello extends Controller {
 
 	function user_test() {
 
-		$u = new User2;
-		$u->username = 'johndoe';
-		$u->password = 'secret';
-		$u->first_name = 'John';
-		$u->last_name = 'Doe';
+		$u = new User;
+		$u->firstname = 'Myeonwoo';
+		$u->lastname = 'Lim';
+		$u->username = 'limm';
+		$u->password = 'limm';
+		$u->email = 'myeonwoo.lim@gmail.com';
+		$u->referer_id = 1;
+		$u->status = 'verified';
 		$u->save();
 
-		$u2 = new User2;
-		$u2->username = 'phprocks';
-		$u2->password = 'mypass';
-		$u2->first_name = 'Codeigniter';
-		$u2->last_name = 'Doctrine';
-		$u2->save();
-
-		echo "added 2 users";
+		echo "added 1 users";
 	}
 
 }

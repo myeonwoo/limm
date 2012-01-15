@@ -1,9 +1,11 @@
 <?php
-class User3 extends Doctrine_Record
+class User extends Doctrine_Record
 {
 	// define table columns in this function
 	public function setTableDefinition() {
 
+	    $this->hasColumn('firstname','string', 255);
+	    $this->hasColumn('lastname','string', 255);
 		$this->hasColumn('username', 'string', 255);
 		$this->hasColumn('password', 'string', 255);
 		$this->hasColumn('email', 'string', 255, array(
@@ -27,11 +29,17 @@ class User3 extends Doctrine_Record
 			'foreign' => 'post_id'
 		));
 
-		// can even have a relationship with itself
+		/*
+		 * 
+		 * can even have a relationship with itself
+		 * 
+		
 		$this->hasOne('User as Referer', array(
 			'local' => 'referer_id',
 			'foreign' => 'id'
 		));
+		
+		*/
 
 		// causes 'created_at' and 'updated_at' fields to be updated automatically
 		$this->actAs('Timestampable');

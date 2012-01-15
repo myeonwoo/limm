@@ -8,13 +8,18 @@ class Home extends Controller {
         
         $this->data['content'] = 'main/home_view';
         $this->data['whichpage'] = "Home";
-        
-        $this->data['title'] = "Home Page";
-        $this->data['heading'] = ".......";
+        $this->data['title'] = "WOODBIRD | Home";
         $this->uri_args = $this->uri->uri_to_assoc();
+        
+        $this->load->library('form_validation');
     }
-	
-	function index()
+    
+    function index(){
+        $data =& $this->data;
+        $this->load->view('main/template/include',$data);
+    }
+    
+	function index2()
 	{
 	    $data =& $this->data;
 	    
@@ -38,37 +43,58 @@ class Home extends Controller {
 		$this->load->view('main/template/include',$data);
 	}
 	
+	public function submit() {
+	
+	    if ($this->_submit_validate() === FALSE) {
+	        /* direct to a page with authentication */
+	        $this->index();
+	        return;
+	    }
+	    /* direct to a page with UN-authentication */
+	    $this->index();
+	    //redirect('/'); // goto default page
+	
+	}
+	
+	private function _submit_validate() {
+	
+	    $this->form_validation->set_rules('username', 'Username', 'trim|required|callback_authenticate');
+	    $this->form_validation->set_rules('password', 'Password', 'trim|required');
+	    $this->form_validation->set_message('authenticate','Invalid login. Please try again.');
+	
+	    return $this->form_validation->run();
+	
+	}
+	public function authenticate() {
+	    return Current_User::login($this->input->post('username'),$this->input->post('password'));
+	}
+	
+	public function authenticate2() {
+	
+	    // get User object by username
+	    if ($u = Doctrine::getTable('User')->findOneByUsername($this->input->post('username'))) {
+	
+	        // this mutates (encrypts) the input password
+	        $u_input = new User();
+	        $u_input->password = $this->input->post('password');
+	
+	        // password match (comparing encrypted passwords)
+	        if ($u->password == $u_input->password) {
+	            unset($u_input);
+	            return TRUE;
+	        }
+	        unset($u_input);
+	    }
+	
+	    return FALSE;
+	}
+	
+	
 	function logout()
 	{
 	    $this->session->sess_destroy();
 	    redirect('main/home', 'refresh');
 	    //$this->index();
 	}
-	
-	function test(){
-	    
-	    $dbconn = pg_connect("host=db.cecs.pdx.edu dbname=limm user=limm password=dexs5aXn") or die('Could not connect: ' . pg_last_error());
-	    
-	    // Performing SQL query
-	    $query = 'SELECT * FROM persons';
-	    $result = pg_query($query) or die('Query failed: ' . pg_last_error());
-	    
-	    // Printing results in HTML
-	    echo "<table>\n";
-	    while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-	        echo "\t<tr>\n";
-	        foreach ($line as $col_value) {
-	            echo "\t\t<td>$col_value</td>\n";
-	        }
-	        echo "\t</tr>\n";
-	    }
-	    echo "</table>\n";
-	    
-	    // Free resultset
-	    pg_free_result($result);
-	    
-	    // Closing connection
-	    pg_close($dbconn);
-	    
-	}
+
 }

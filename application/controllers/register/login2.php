@@ -8,6 +8,10 @@ class Login extends Controller {
     $this->load->view('login', $Data);
   }
   
+  function test(){
+      echo 'hi';
+  }
+  
   function validate_credentials()
   {   
     $this->load->model('membership_model');

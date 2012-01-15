@@ -28,19 +28,18 @@
       </div>
       
       <div class="sidebar">
+          
       	<?php
-            if(isset($is_logged_in)){
-                echo 'You are login.';
-                echo "<a href='". base_url()."index.php/main/home/logout'>Logout</a>";
-            } else {
-                echo form_open('main/home');
-                echo form_input('username', '');
-                echo ' User Name  ';
-                echo form_password('password', '');
-                echo ' Password  ';
-                echo form_submit('submit', 'Login');
-                echo anchor('register/login/signup', 'Create Account');
-                echo form_close();
+      	    if (!($user = Current_User::user())){
+      	        echo form_open('main/home/submit');
+      	        echo form_input('username', '');
+      	        echo ' User Name  ';
+      	        echo form_password('password', '');
+      	        echo ' Password  ';
+      	        echo form_submit('submit', 'Login');
+      	        echo anchor('register/login/signup', 'Create Account');
+      	        echo form_close();
+      	        
             }
         ?>
         <div class="searchform">
@@ -76,21 +75,4 @@
       <div class="clr"></div>
     </div>
   </div>
-  <div class="fbg">
-    <div class="fbg_resize">
-      <div class="col c1">
-        <h2><span>Image Gallery</span></h2>
-        <a href="#"><img src="images/pix1.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pix2.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pix3.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pix4.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pix5.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pix6.jpg" width="58" height="58" alt="" /></a> </div>
-      <div class="col c2">
-        <h2><span>Descript 2</span></h2>
-        <p>.............<br /> </p>
-      </div>
-      <div class="col c3">
-        <h2><span>Descript 3</span></h2>
-        <p>.............<br /> </p>
-      </div>
-      <div class="clr"></div>
-    </div>
-  </div>
-  
 </div>

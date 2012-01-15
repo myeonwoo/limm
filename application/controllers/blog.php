@@ -5,12 +5,31 @@ class Blog extends Controller {
     function Blog()
     {
         parent::Controller();
-        $this->load->scaffolding('entries');
+        //$this->load->scaffolding('entries');
         //$this->load->helper('url');
         //$this->load->helper('form');
+        
+        //$this->is_logged_in();
+        //$this->load->scaffolding('entries');
+        $this->data['content'] = 'main/blog_view';
+        $this->data['whichpage'] = "Blog";
+        
+        $this->data['title'] = "My blog Title";
+        $this->data['heading'] = "My Blog Heading";
+        //$this->data['query'] = $this->db->get('entries');
+        $this->uri_args = $this->uri->uri_to_assoc();
     }
 	
-    function index()
+    public function index() {
+        
+        $data =& $this->data;
+        $data['categories'] = Doctrine::getTable('Category')->findAll();
+        $this->load->view('main/template/include', $data);
+
+		//$vars['categories'] = Doctrine::getTable('Category')->findAll();
+		//$this->load->view('blog', $vars);
+	}
+    function main()
     {
         //$this->load->view('main/home');
         //echo 'hi';

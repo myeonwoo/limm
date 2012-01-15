@@ -18,12 +18,15 @@ class Signup extends Controller {
             return;
         }
         
+        
         /*
          * TODO: insert the user to database
          * 
          * Use Doctrine library
          */
-            $u = new User3();
+            $u = new User();
+            $u->firstname = $this->input->post('firstname');
+            $u->lastname = $this->input->post('lastname');
             $u->username = $this->input->post('username');
             $u->password = $this->input->post('password');
             $u->email = $this->input->post('email');
@@ -36,6 +39,8 @@ class Signup extends Controller {
     private function _submit_validate() {
     
         // validation rules
+        $this->form_validation->set_rules('firstname','First Name','trim|required|alpha');
+        $this->form_validation->set_rules('lastname','Last Name','trim|required|alpha');
         $this->form_validation->set_rules('username', 'Username',
     			'required|alpha_numeric|min_length[6]|max_length[12]');
     

@@ -43,27 +43,34 @@
                 <?php echo form_open('register/signup/submit'); ?>
                 
                 <p>
+                	<label>First Name:</label>
+                	<?php echo form_input('firstname');?>
+                </p>
+                <p>
+                	<label>Last Name:</label>
+                	<?php echo form_input('lastname');?>
+                </p>
+                <p>
                 	<label for="username">Username: </label>
-                <?php echo form_input('username'); ?>
+                    <?php echo form_input('username'); ?>
                 </p>
                 <p>
                 	<label for="password">Password: </label>
-                <?php echo form_password('password'); ?>
+                    <?php echo form_password('password'); ?>
                 </p>
                 <p>
                 	<label for="passconf">Confirm Password: </label>
-                <?php echo form_password('passconf'); ?>
+                    <?php echo form_password('passconf'); ?>
                 </p>
                 <p>
                 	<label for="email">E-mail: </label>
-                <?php echo form_input('email'); ?>
+                    <?php echo form_input('email'); ?>
                 </p>
                 <p>
-                <?php echo form_submit('submit','Create my account'); ?>
+                    <?php echo form_submit('submit','Create my account'); ?>
                 </p>
                 
 
-                <?php echo validation_errors('<p class="error">','</p>'); ?>  
                 <?php echo form_close(); ?>
             </div>
 
@@ -82,6 +89,7 @@
             <li><a href="#">item 3</a></li>
           </ul>
         </div>
+        <?php echo validation_errors('<div id="signup_form"><p class="error">','</p></div>'); ?>
         
       </div>
       <div class="clr"></div>

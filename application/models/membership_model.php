@@ -6,7 +6,7 @@ class Membership_model extends Model {
 	{
 		$this->db->where('username', $this->input->post('username'));
 		//$this->db->where('password', md5($this->input->post('password')));
-		$this->db->where('password', $this->input->post('password'));
+		$this->db->where('password', md5($this->input->post('password')));
 		
 		$query = $this->db->get('user');
 		
