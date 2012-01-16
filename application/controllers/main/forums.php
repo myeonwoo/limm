@@ -33,7 +33,7 @@ class Forums extends Controller {
             $config['base_url'] = base_url() . "main/forums/display/$id";
             $config['total_rows'] = $num_threads;
             $config['per_page'] = $per_page;
-            $config['uri_segment'] = 4;
+            $config['uri_segment'] = 5;
             $this->pagination->initialize($config);
     
             $vars['pagination'] = $this->pagination->create_links();
