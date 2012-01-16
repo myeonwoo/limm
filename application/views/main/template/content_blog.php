@@ -1,5 +1,3 @@
-
-<div class="main">
 <div class="content">
 <div class="content_resize">
     <div class="forums">
@@ -33,6 +31,5 @@
     
     	<?php endforeach; ?>
     </div>
-</div>
 </div>
 </div>

@@ -10,11 +10,11 @@ class Blog extends Controller {
         //$this->load->helper('form');
         
         //$this->load->scaffolding('entries');
-        $this->data['content'] = 'main/blog_view';
-        $this->data['whichpage'] = "Blog";
-        
-        $this->data['title'] = "My blog Title";
-        $this->data['heading'] = "My Blog Heading";
+        $this->data['header1'] = 'main/template/header_1';
+        $this->data['content'] = 'main/template/content_blog';
+        $this->data['header_menu_select'] = 'Blog';
+        $this->data['header_menu_list'] = array('main/home'=>'Home','main/resume'=>'About Me','main/blog'=>'Blog','main/picture'=>'Picture');
+        $this->data['title'] = "WOODBIRD | Blog";
         //$this->data['query'] = $this->db->get('entries');
         $this->uri_args = $this->uri->uri_to_assoc();
         
@@ -38,7 +38,7 @@ class Blog extends Controller {
         if($user = Current_User::user()){
             $data =& $this->data;
             $data['categories'] = Doctrine::getTable('Category')->findAll();
-            $this->load->view('main/template/include', $data);
+            $this->load->view('main/template/view_1', $data);
         } else {
             redirect('main/home');
         }
@@ -46,6 +46,7 @@ class Blog extends Controller {
 		//$vars['categories'] = Doctrine::getTable('Category')->findAll();
 		//$this->load->view('blog', $vars);
 	}
+	
     function main()
     {
         //$this->load->view('main/home');

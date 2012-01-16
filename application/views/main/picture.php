@@ -52,6 +52,9 @@
           <li><a href="<?php echo base_url(); ?>index.php/main/blog">Blog</a></li>
           <li class="active"><a href="<?php echo base_url(); ?>index.php/main/picture">Picture</a></li>
         </ul>
+        <div class="user_controls">
+            <?php $this->load->view('main/template/user_controls'); ?>
+    	</div>
       </div>
       <div class="logo">
         <h1><a href="#">woodbird <small>myeonwoo</small></a></h1>
