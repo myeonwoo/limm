@@ -21,6 +21,14 @@ class Home extends Controller {
         $this->load->view('main/template/view_1',$data);
     }
     
+    function loginerror($message){
+        $login_error = array('resume'=>'Login first to look at my resume!',
+                                'blog'=>'Login first to look my blog');
+        $data =& $this->data;
+        $data['user_message'] = $login_error[$message];
+        $this->load->view('main/template/view_1',$data);
+    }
+    
     function test(){
         
         $this->load->view('main/template/view_1',$data);

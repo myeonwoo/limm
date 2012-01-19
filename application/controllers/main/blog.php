@@ -40,7 +40,7 @@ class Blog extends Controller {
             $data['categories'] = Doctrine::getTable('Category')->findAll();
             $this->load->view('main/template/view_1', $data);
         } else {
-            redirect('main/home');
+            redirect('main/home/loginerror/blog');
         }
 
 		//$vars['categories'] = Doctrine::getTable('Category')->findAll();

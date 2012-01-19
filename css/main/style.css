@@ -115,7 +115,7 @@ a.com span {
 	padding:3px 20px 4px;
 	color:#959595;
 	text-decoration:none;
-	font-size:12px;
+	font-size:15px;
 }
 .menu_nav ul li.active a, .menu_nav ul li a:hover {
 	color:#fff;
@@ -458,4 +458,11 @@ iframe {
 }
 
 
+/** Anchors **/
+a.margin_right{
+	margin: 0 12px 0 0;
+}
+a.margin_left{
+    margin: 0 0 0 12px;
+}
 

@@ -21,7 +21,7 @@
     
     	<?php echo form_close(); ?>
     	<p>
-    		<?php echo anchor('register/login/signup','Create an Account'); ?>
+    		<?php echo anchor('main/signup','Create an Account'); ?>
     	</p>
     
     </div>

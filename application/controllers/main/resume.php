@@ -14,8 +14,13 @@ class Resume extends Controller {
     }
 
     function index(){
-        $data =& $this->data;
-        $this->load->view('main/template/view_1',$data);
+        if($user = Current_User::user()){
+            $data =& $this->data;
+            $this->load->view('main/template/view_1',$data);
+        } else {
+            redirect('main/home/loginerror/resume');
+        }
+        
     }
     
     function myresume(){

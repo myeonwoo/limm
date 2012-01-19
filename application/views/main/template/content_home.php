@@ -26,20 +26,7 @@
       </div>
       
       <div class="sidebar">
-          
-      	<?php
-      	    if (!($user = Current_User::user())){
-      	        echo form_open('main/home/submit');
-      	        echo form_input('username', '');
-      	        echo ' User Name  ';
-      	        echo form_password('password', '');
-      	        echo ' Password  ';
-      	        echo form_submit('submit', 'Login');
-      	        echo anchor('register/login/signup', 'Create Account');
-      	        echo form_close();
-      	        
-            }
-        ?>
+
         <div class="searchform">
           <form id="formsearch" name="formsearch" method="post" action="#">
             <span>

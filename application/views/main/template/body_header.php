@@ -16,6 +16,8 @@
         <div class="user_controls">
             <?php $this->load->view('main/template/user_controls'); ?>
     	</div>
+    	<div class="clr"></div>
+    	<div id="signup_form"><p class="error"><?php if(isset($user_message)) echo $user_message;?></p></div>
       </div>
       
       <div class="logo">
