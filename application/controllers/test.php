@@ -30,38 +30,8 @@ Class Test extends Controller {
     
     }
     
-    function arterial()
-    {
-    
-        if (True) {
-        	$this->load->model("station");
-        
-          $this->uri_args = $this->uri->uri_to_assoc();
-          $data['dataset'] = '';
-          if (array_key_exists('id', $this->uri_args)) {
-          
-            $stationid = intval($this->uri_args['id']);
-            $data['dataset'] .= 'id:'. (string)$stationid;
-            
-            $data['stationid'] = $this->uri_args['id'];
-            //$out = $this->station->getSample($stationid);
-            //$data['dataset'] .= $out;
-          }
-        }
-        /*
-        foreach ($row as $key => $value)
-        	{
-        		$data['dataset'] .= ','. $key . ':'. $value;
-        		#$this->data[$key] = $value;
-        	}
-        */
-        
-        
-        
-        #$this->load->view('welcome');
-        $this->load->view('template/arterial_header');
-        $this->load->view('test_view', $data);
-        $this->load->view('template/arterial_footer');
+    function jqueryui(){
+        $this->load->view('test');
     }
     
     function myjson(){

@@ -326,7 +326,7 @@ ol li .send {
 
 /* FORUMS */
 div.forums{
-	width: 720px;
+	width:100%; /*width: 720px;*/
 	margin: auto;
 }
 .forums h1 {
@@ -353,6 +353,10 @@ div.forums{
     -webkit-border-top-right-radius: 6px;
 }
 
+.forums h2 p{
+	float:right;
+	font-size: 15px;
+}
 .forums h3 {
     font-size: 15px;
     margin: 0px;

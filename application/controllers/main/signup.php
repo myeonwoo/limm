@@ -39,7 +39,6 @@ class Signup extends Controller {
             $u->password = $this->input->post('password');
             $u->email = $this->input->post('email');
             $u->save();
-        
         $data['message'] = 'Your acount was created!';
         $this->load->view('display_message',$data);
     }

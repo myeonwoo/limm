@@ -18,12 +18,12 @@ class Thread extends Doctrine_Record {
 	}
 	
 	public function getPostsArray($offset, $limit) {
-	    
 	    $posts = Doctrine_Query::create()
-	    ->select('u.username as username, p.content as content, p.created_at as post_date')
-	    ->from('Post p, p.User u')
+	    ->select('p.content as content, p.created_at as post_date')
+	    //->addSelect('u.username as username')
+	    ->from('Post p')
 	    ->where('p.thread_id = ?', $this->id)
-	    ->orderBy('p.created_at DESC')
+	    ->orderBy('post_date DESC')
 	    ->limit($limit)
 	    ->offset($offset)
 	    ->setHydrationMode(Doctrine::HYDRATE_ARRAY)
@@ -34,6 +34,20 @@ class Thread extends Doctrine_Record {
 	    }
 	
 	    return $posts;
+	    
+	    $q = Doctrine_Query::create()
+	    ->select('p.content as content, p.created_at as post_date, u.username as username')
+	    ->from('Post p, User u')
+	    ->where('p.user_id=u.id and p.thread_id = ?', $this->id)
+	    ->orderBy('post_date DESC')
+	    ->limit(2);
+	    
+	    
+	    return $q->execute();
+	    
+	    
+	    
+	    
 	
 	}
 

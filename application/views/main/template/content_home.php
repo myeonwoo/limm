@@ -2,7 +2,7 @@
     <div class="content_resize">
       <div class="mainbar">
         <div class="article">
-          <h2><span>Template</span> License</h2>
+          <h2><span>Template</span></h2>
           <div class="clr"></div>
           <p class="infopost">
           	<span class="date">On 11 sep 2018</span> Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under 
@@ -15,7 +15,7 @@
           <p class="spec"><a href="#" class="rm">Read more &raquo;</a></p>
         </div>
         <div class="article">
-          <h2><span>Future</span> technology</h2>
+          <h2><span>Past</span> Experience</h2>
           <div class="clr"></div>
           <p class="infopost"><span class="date">On 29 aug 2010</span> Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a> &nbsp;|&nbsp; with <a href="#" class="com">Comments (<span>7</span>)</a></p>
           <img src="<?php echo base_url(); ?>images/main/img2.jpg" width="201" height="141" alt="" class="fl" />
