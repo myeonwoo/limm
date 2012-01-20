@@ -23,7 +23,7 @@ class Home extends Controller {
     
     function loginerror($message){
         $login_error = array('resume'=>'Login first to look at my resume!',
-                                'blog'=>'Login first to look my blog');
+                                'blog'=>'Login first to look my blog','login'=>'Incorrect username or password!');
         $data =& $this->data;
         $data['user_message'] = $login_error[$message];
         $this->load->view('main/template/view_1',$data);
@@ -62,7 +62,8 @@ class Home extends Controller {
 	
 	    if ($this->_submit_validate() === FALSE) {
 	        /* direct to a page with authentication */
-	        $this->index();
+	        redirect('main/home/loginerror/login');
+	        //$this->index();
 	        return;
 	    }
 	    /* direct to a page with UN-authentication */

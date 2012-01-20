@@ -48,7 +48,7 @@
       <div class="menu_nav">
         <ul>
           <li><a href="<?php echo base_url(); ?>index.php/main/home">Home</a></li>
-          <li><a href="<?php echo base_url(); ?>index.php/main/aboutme">About me</a></li>
+          <li><a href="<?php echo base_url(); ?>index.php/main/resume">About me</a></li>
           <li><a href="<?php echo base_url(); ?>index.php/main/blog">Blog</a></li>
           <li class="active"><a href="<?php echo base_url(); ?>index.php/main/picture">Picture</a></li>
         </ul>
@@ -122,7 +122,7 @@
   <div class="footer">
     <div class="footer_resize">
       <p class="lf">&copy; Copyright <a href="#">MyWebSite</a>.</p>
-      <p class="rf">Layout by Rocket <a href="#">Website Templates</a></p>
+      <p class="rf">Modified by Myeonwoo Lim <a href="#">Website Templates</a></p>
       <div class="clr"></div>
     </div>
   </div>
