@@ -2,7 +2,7 @@
 <div class="content_resize">
     <div class="mainbar">
         <div class="forums">
-            <h1><?php echo $title ?></h1>
+            <h2><?php echo $thread_title ?></h2>
             
             <?php foreach($posts as $post): ?>
             <div class="forum">
@@ -11,8 +11,8 @@
             		<?php echo $post['username']; ?> said,  
             	</h2>
             	<div>
-            		<p><em><?php echo $post['content']; ?></em></p>
-            		<p>@ <?php echo $post['post_date']; ?></p>
+            		<p><?php echo $post['content']; ?></p>
+            		<p><em>@ <?php echo $post['post_date']; ?></em></p>
             	</div>
             
             </div>

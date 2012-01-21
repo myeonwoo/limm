@@ -14,6 +14,30 @@ class Threads extends Controller {
     }
 
     public function display($id, $offset = 0) {
+        $this->load->model("blog");
+        $per_page = 4;
+        
+        $vars =& $this->data;
+        $vars['posts'] = $this->blog->get_post($id);
+        $vars['thread_id'] = $id;
+        $vars['thread_title'] = $this->blog->get_thread_title($id);
+        
+        $num_threads = count($vars['posts']);
+        // do we have enough to paginate
+        if ( $num_threads > $per_page) {
+            // PAGINATION
+            $this->load->library('pagination');
+            $config['base_url'] = base_url()."index.php/main/thread/display/$id";
+            $config['total_rows'] = $num_threads;
+            $config['per_page'] = $per_page;
+            $config['uri_segment'] = 5;
+            $this->pagination->initialize($config);
+    
+            $vars['pagination'] = $this->pagination->create_links();
+        }
+        
+        $this->load->view('main/template/view_1', $vars);
+        return;
         
         $vars =& $this->data;
         $per_page = 4;

@@ -2,7 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title><?php if (isset($title)) echo $title; ?></title>
-    <?php if (isset($header1)) $this->load->view($header1); ?>
+    <?php 
+        if (isset($headers)) {
+            foreach( $headers as $value) {
+                $this->load->view($value);
+            }
+        }
+        if (isset($javascripts)) {
+            foreach( $javascripts as $value) {
+                echo '<script type="text/javascript" src="'.base_url().$value.'"></script>';
+            }
+        }
+    ?>
 </head>
 <body>
 

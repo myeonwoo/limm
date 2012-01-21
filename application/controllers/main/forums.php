@@ -7,7 +7,8 @@ class Forums extends Controller {
         $this->load->helper(array('form','url'));
         $this->load->library('form_validation');
         
-        $this->data['header1'] = 'main/template/header_1';
+        $this->data['headers'] = array('main/template/header_1','main/template/header_2');
+        $this->data['javascripts'] = array('js/dialog/thread_post.js');
         $this->data['content'] = 'main/template/content_forum';
         $this->data['header_menu_select'] = 'Blog';
         $this->data['header_menu_list'] = array('main/home'=>'Home','main/resume'=>'About Me','main/blog'=>'Blog','main/picture'=>'Picture');
@@ -53,6 +54,10 @@ class Forums extends Controller {
     }
     
     public function thread_insert(){
+        echo $_POST['forum_id'];
+        echo $_POST['thread_title'];
+        echo $_POST['post_comment'];
+        return;
         if($user = Current_User::user()){
             if($this->_submit_validate()=== FALSE){
                 $this->display($_POST['forum_id']);

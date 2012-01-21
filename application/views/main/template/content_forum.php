@@ -1,7 +1,27 @@
+
 <div class="content">
 <div class="content_resize">
-
     <div class="mainbar">
+    
+        <div id="dialog-form-thread" title="Create new user">
+        	<p class="validateTips">All form fields are required.</p>
+        
+        	<form id="user_form" action="http://localhost/limm/index.php/main/forums/thread_insert" method="post">
+        	<fieldset>
+        		<?php echo form_hidden('forum_id',$this->uri->segment(4));?>
+        		<label>Title:</label>
+        		<div class="clr"></div>
+        		<textarea name="thread_title" id="thread_title" cols="50" rows="2" ></textarea> 
+        		<div class="clr"></div>
+        		<label>Content:</label>
+        		<div class="clr"></div>
+        		<textarea name="post_comment" id="post_comment" cols="50" rows="5" ></textarea>
+
+        		<input type="submit" name="submit" id="user_submit" style="visibility:hidden" value="create"  /> 
+        	</fieldset>
+        	</form>
+        </div>
+        
     	<div class="forums">
             <h1><?php echo $forum_title ?></h1>
             <h2></h2>
@@ -26,25 +46,13 @@
             		Pages: <?php echo $pagination; ?>
             	</div>
             <?php endif; ?>
-        
         </div>
+        
+        <button id="create-thread-post">Post another</button>
     </div>
+    
     <div class="sidebar">
-    	<?php echo form_open('main/forums/thread_insert');?>
-    	<?php echo form_hidden('forum_id',$this->uri->segment(4));?>
-    	<p>
-    		<label>Thread title:</label>
-    		<?php echo form_input('thread_title');?>
-    	</p> 
-    	<p>
-    		<label>comment:</label>
-    		<?php echo form_textarea('post_comment','')?>
-    	</p>
-    	<p>
-    	    <?php echo form_submit('submit','Post'); ?>
-    	</p>
     	
-    	<?php echo form_close();?>
     </div>
     <div class="clr"></div>
 
