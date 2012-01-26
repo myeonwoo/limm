@@ -1,0 +1,156 @@
+@CHARSET "ISO-8859-1";
+
+.comments {
+    overflow: hidden;
+    width: 100%;
+}
+
+a.add_comment_link, button.add_comment_link {
+    float: right;
+    font-size: 13px;
+    position: relative;
+    top: 5px;
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 0 #333333;
+    background: none repeat scroll 0 0 #E6E6E6;
+    border: 1px solid #B3B3B3;
+    margin-right: 4px;
+    padding: 5px 9px 4px;
+    text-decoration: none !important;
+}
+
+
+.comments h1 {
+    font-size: 20px;
+    letter-spacing: -1px;
+    color: #000000;
+    font-family: Helvetica,Arial;
+    font-weight: bold;
+    line-height: 1.1em;
+    padding-bottom: 5px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.comments h1 span {
+    color: #5F5F5F;
+    font-size: 15px;
+}
+
+.commentlist {
+    padding-top: 10px;
+}
+
+li.comment {
+    background: none repeat scroll 0 0 transparent;
+    list-style: none outside none !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+}
+
+.commentlist .comment-body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DFDFDF;
+    margin-bottom: 10px;
+    min-height: 80px;
+    overflow: hidden;
+    padding: 30px 150px 30px 30px;
+    position: relative;
+}
+
+.commentlist .comment-body .avatar {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.commentlist .comment-body .fn {
+    float: left;
+    font-family: Helvetica,Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+.fn a:link, .fn a:visited {
+    color: #276056;
+}
+
+.commentlist .comment-body .says {
+    display: none;
+}
+
+.commentlist .comment-body .commentmetadata {
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: 5px;
+}
+
+.commentlist .comment-body .commentmetadata a {
+    color: #989898;
+}
+.comment-body p {
+    padding-bottom: 0px;
+    font-size: 13px;
+}
+.comment-reply-link {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-right: 1px solid #E8E8E8;
+    border-top: 1px solid #E8E8E8;
+    bottom: 0;
+    font-family: Tahoma;
+    font-size: 8px;
+    left: 0;
+    padding: 0 8px 1px;
+    position: absolute;
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+.commentlist .children {
+    margin-bottom: 10px;
+}
+
+li.comment {
+    list-style: none outside none !important;
+}
+
+.commentlist .children li > .comment-body {
+    margin-bottom: 10px;
+}
+.commentlist .children .comment-body {
+    margin-bottom: 0;
+    min-height: 90px;
+    padding: 20px 20px 0 90px;
+    margin: 0 !important;
+}
+
+.commentlist .children .comment-body .avatar {
+    height: 50px;
+    left: 20px;
+    position: absolute;
+    right: auto;
+    top: 20px;
+    width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

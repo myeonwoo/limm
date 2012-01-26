@@ -48,7 +48,43 @@
             <?php endif; ?>
         </div>
         
-        <button id="create-thread-post">Post another</button>
+        <div class="comments">
+        	<button id="create-thread-post" class="add_comment_link">Post another</button>
+        	<h1 class="comments-header"> Subject: <span><?php echo $forum_title ?></span> </h1>
+        	<ol class="commentlist">
+        		
+        		<li id="comment-395936" class="comment even thread-even depth-1 parent">
+        			<ul class="children">
+                		<?php foreach($threads as $thread): ?>
+        				<li id="comment-395939" class="comment odd alt depth-2">
+        					<div id="div-comment-395939" class="comment-body">
+        						<div class="comment-author vcard">
+        						<img class="avatar avatar-80 photo" width="80" height="80" src="http://localhost/limm/images/users/user1.png" alt="">
+        						<cite class="fn">
+        						Author:<a class="url" rel="external nofollow" href="#" ><?php echo $thread['username']; ?></a>
+        						</cite>
+        						<span class="says">says:</span>
+        						</div>
+        						
+        						<div class="comment-meta commentmetadata">
+        						<a href="#"><?php echo $thread['last_post_date']; ?></a>
+        						</div>
+        						
+        						<p><?php echo $thread['title']; ?></p>
+        						<p>(<?php echo $thread['num_replies']; ?> replies)</p>
+        						
+        						<div class="reply">
+        						<?php echo anchor('main/threads/display/'.$thread['id'], 'Reply', array('class'=>"comment-reply-link")) ?>
+        						</div>
+        					</div>
+        				</li>
+        				<?php endforeach; ?>
+        			</ul>
+        		</li>
+        		
+        	</ol>
+        
+        </div>
     </div>
     
     <div class="sidebar">

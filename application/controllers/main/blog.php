@@ -10,7 +10,8 @@ class Blog extends Controller {
         //$this->load->helper('form');
         
         //$this->load->scaffolding('entries');
-        $this->data['headers'] = array('main/template/header_1');
+        $this->data['headers'] = array('main/template/header_1','main/template/header_2');
+        $this->data['javascripts'] = array('js/dialog/thread_post.js');
         $this->data['content'] = 'main/template/content_blog';
         $this->data['header_menu_select'] = 'Blog';
         $this->data['header_menu_list'] = array('main/home'=>'Home','main/resume'=>'About Me','main/blog'=>'Blog','main/picture'=>'Picture');

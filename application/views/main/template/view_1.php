@@ -8,6 +8,12 @@
                 $this->load->view($value);
             }
         }
+        if (isset($styles)) {
+            foreach( $styles as $value) {
+                echo '<link href="'.base_url().$value.'" rel="stylesheet" type="text/css" />';
+                //echo '<script type="text/javascript" src="'.base_url().$value.'"></script>';
+            }
+        }
         if (isset($javascripts)) {
             foreach( $javascripts as $value) {
                 echo '<script type="text/javascript" src="'.base_url().$value.'"></script>';

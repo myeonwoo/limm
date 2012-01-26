@@ -6,13 +6,15 @@ class Home extends Controller {
     {
         parent::Controller();
         
-        $this->data['headers'] = array('main/template/header_1');
+        $this->data['headers'] = array('main/template/header_1','main/template/header_2');
         $this->data['javascripts'] = array('js/dialog/thread_post.js');
         $this->data['header_menu_select'] = 'Home';
         $this->data['header_menu_list'] = array('main/home'=>'Home','main/resume'=>'About Me','main/blog'=>'Blog','main/picture'=>'Picture');
         $this->data['title'] = "WOODBIRD | Home";
         $this->data['content'] = 'main/template/content_home';
+        $this->data['this_url'] = base_url().'index.php/main/home';
         $this->uri_args = $this->uri->uri_to_assoc();
+        $this->uri_args['controller'] = 'main/home/';
         
         $this->load->library('form_validation');
     }
@@ -23,7 +25,7 @@ class Home extends Controller {
     }
     
     function loginerror($message){
-        $login_error = array('resume'=>'Login first to look at my resume!',
+        $login_error = array('resume'=>'Login first to know about me!',
                                 'blog'=>'Login first to look my blog','login'=>'Incorrect username or password!');
         $data =& $this->data;
         $data['user_message'] = $login_error[$message];

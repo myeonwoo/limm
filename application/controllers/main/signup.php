@@ -7,7 +7,7 @@ class Signup extends Controller {
         $this->load->helper(array('form','url'));
         $this->load->library('form_validation');
         
-        $this->data['header1'] = 'main/template/header_1';
+        $this->data['headers'] = array('main/template/header_1');
         $this->data['header_menu_select'] = '';
         $this->data['header_menu_list'] = array('main/home'=>'Home','main/resume'=>'About Me','main/blog'=>'Blog','main/picture'=>'Picture');
         $this->data['title'] = "WOODBIRD | Signup";

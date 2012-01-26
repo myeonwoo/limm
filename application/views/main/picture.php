@@ -4,41 +4,16 @@
 <title>Lim | Picture</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="<?php echo base_url(); ?>css/main/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/psu/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
 <script type="text/javascript" src="<?php echo base_url(); ?>js/main/cufon-yui.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/main/arial.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/main/cuf_run.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/main/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/main/radius.js"></script>
-
 <script type="text/javascript" src="<?php echo base_url(); ?>css/psu/jquery.mousewheel-3.0.4.pack.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>css/psu/jquery.fancybox-1.3.4.pack.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/psu/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script type="text/javascript" src="<?php echo base_url(); ?>js/display/fancybox_picture.js"></script>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		//$("a.a").fancybox();
-		$("a[rel=example_group]").fancybox({
-			'transitionIn'		: 'none',
-			'transitionOut'		: 'none',
-			'titlePosition' 	: 'over',
-			'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
-				return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
-			}
-		});
-		
-		var files = <?php echo json_encode($files); ?>;
-		  var list = $('<ul>').appendTo( $('#picture_links'));
-		  list = $('.picture_links');
-		  for(x in files){
-			  if (typeof files[x] == "object") {
-				  var url = "<?php echo base_url(); ?>index.php/main/picture/display/"+x;
-				  list.append('<li class="folder"><a href="'+url+'">'+x+'</a></li>');
-			  }
-
-		  }
-		  
-	});
-</script>
   
 </head>
 <body>
@@ -62,7 +37,10 @@
       <div class="clr"></div>
     </div>
   </div>
-  
+<script type="text/javascript">
+var url = "<?php echo base_url(); ?>index.php/main/picture/display/";
+var files = <?php echo json_encode($files); ?>;
+</script>
   
   <div class="content">
     <div class="content_resize">

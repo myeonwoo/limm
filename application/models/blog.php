@@ -6,7 +6,7 @@ class Blog extends Model{
     }
     
     function get_post($thread_id){
-        $sql = "select p.content, p.created_at as post_date, u.username
+        $sql = "select p.content, p.created_at as post_date, u.username, u.firstname, u.lastname
             from post P, user U
             where P.user_id=U.id and P.thread_id=$thread_id
             order by post_date desc";
@@ -17,6 +17,8 @@ class Blog extends Model{
             $resrow = array();
             $resrow['post_date'] = $row->post_date;
             $resrow['username'] = $row->username;
+            $resrow['firstname'] = $row->firstname;
+            $resrow['lastname'] = $row->lastname;
             $resrow['content'] = $row->content;
             $data[] = $resrow;
             

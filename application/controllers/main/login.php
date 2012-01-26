@@ -6,7 +6,7 @@ class Login extends Controller {
     {
         parent::Controller();
         
-        $this->data['header1'] = 'main/template/header_1';
+        $this->data['headers'] = array('main/template/header_1');
         $this->data['header_menu_select'] = '';
         $this->data['header_menu_list'] = array('main/home'=>'Home','main/resume'=>'About Me','main/blog'=>'Blog','main/picture'=>'Picture');
         $this->data['title'] = "WOODBIRD | Login";

@@ -17,6 +17,8 @@ class Signup extends Controller {
             $this->index();
             return;
         }
+        echo 'ok';
+        return;
         
         
         /*

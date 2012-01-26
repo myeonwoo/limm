@@ -6,7 +6,10 @@ Class Test extends Controller {
         parent::Controller(); 
     }
     
-    function index()
+    function index(){
+        $this->load->view('test');
+    }
+    function ex1()
     {
         echo BASEPATH;
         echo date("M-d-Y G", mktime(4, 0, 0, 12, 32, 1997));
