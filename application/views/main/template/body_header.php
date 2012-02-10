@@ -51,10 +51,11 @@
     		<div class="clr"></div>
     		<input name="password" id="password"></input>
 
-    		<input type="submit" name="submit" id="login_submit" style="visibility:hidden" value=""  /> 
+    		<input type="submit" name="submit" id="login_submit" value="submit"  /> 
     	</fieldset>
     	</form>
     </div>
+    
     
     <div id="dialog-form-register" title="Register Form">
     	<p class="dialog-form-register-validateTips">All form fields are required.</p>
