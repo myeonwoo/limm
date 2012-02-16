@@ -22,7 +22,7 @@ class Forums extends Controller {
     public function display($id, $offset = 0) {
         if($user = Current_User::user()){
             $vars =& $this->data;
-            $per_page = 4;
+            $per_page = 5;
         
             $forum = Doctrine::getTable('Forum')->find($id);
         

@@ -10,21 +10,76 @@
                       else
                           echo '<li><a href="'. base_url().'index.php/'.$key.'">'.$value.'</a></li>';
                   }
-
           ?>
         </ul>
         <div class="user_controls">
             <?php
-                if ($user = Current_User::user()){
-                    echo 'Hello, <em>'.$user->username.'</em>'.anchor('main/home/logout', 'Logout');
-                } else {
-                    //echo anchor('main/login','Login');
-                    echo '<a id="dialog-form-login-open" href="#">Login</a>';
-                    echo '<a id="dialog-form-register-open" href="#">Register</a>';
-                    //echo anchor('main/signup', 'Register');
-                }
-                    
-            ?>
+            if ($user = Current_User::user()){
+                echo 'Hello, <em>'.$user->username.'</em>'.anchor('main/home/logout', 'Logout');
+            } else { ?>
+            <?php 
+                //echo anchor('main/login','Login');
+                echo '<a id="dialog-form-login-open" href="#">Login</a>';
+                echo '<a id="dialog-form-register-open" href="#">Register</a>';
+                //echo anchor('main/signup', 'Register'); ?>
+                <div id="dialog-form-login" title="Login Form">
+                	<p class="dialog-form-login-validateTips">All form fields are required.</p>
+                
+                	<form id="user_form" action="<?php echo base_url().'index.php/main/home/submit';?>" method="post">
+                	<fieldset>
+                		<?php echo form_hidden('forum_id',$this->uri->segment(4));?>
+                		<label>username:</label>
+                		<div class="clr"></div>
+                		<input name="username" id="username" ></input> 
+                		<div class="clr"></div>
+                		<label>password:</label>
+                		<div class="clr"></div>
+                		<input name="password" id="password"></input>
+                		<input type="submit" name="submit" id="login_submit" style="visibility:hidden" value="submit"  /> 
+                	</fieldset>
+                	</form>
+                </div>
+                
+                
+                <div id="dialog-form-register" title="Register Form">
+                	<p class="dialog-form-register-validateTips">All form fields are required.<br />
+                	First/last name must be alphabets in 2 to 50 length.<br />
+                	Username must be a combination of alphabet and numeric in 2 to 50 length.<br />
+                	Password must be in 2 to 50 length.
+                	</p>
+                
+                	<form id="user_form" action="<?php echo base_url().'index.php/register/signup/submit';?>" method="post">
+                	<fieldset>
+                		<?php echo form_hidden('forum_id',$this->uri->segment(4));?>
+                		<label>First Name:</label>
+                		<div class="clr"></div>
+                		<input type="text" name="firstname" id="firstname" ></input> 
+                		<div class="clr"></div>
+                		<label>Last Name:</label>
+                		<div class="clr"></div>
+                		<input type="text" name="lastname" id="lastname"></input>
+                		<div class="clr"></div>
+                		<label>Username:</label>
+                		<div class="clr"></div>
+                		<input type="text" name="username" id="username"></input>
+                		<div class="clr"></div>
+                		<label>Password:</label>
+                		<div class="clr"></div>
+                		<input type="password" name="password" id="password"></input>
+                		<div class="clr"></div>
+                		<label>Confirm Password:</label>
+                		<div class="clr"></div>
+                		<input type="password" name="passconf" id="passconf"></input>
+                		<div class="clr"></div>
+                		<label>E-mail:</label>
+                		<div class="clr"></div>
+                		<input type="text" name="email" id="email"></input>
+            
+                		<input type="submit" name="submit" id="register_submit" style="visibility:hidden" value="register"  /> 
+                	</fieldset>
+                	</form>
+                </div>
+            <?php } ?>
     	</div>
     	
     	<div class="clr"></div>
@@ -37,60 +92,7 @@
       <div class="clr"></div>
     </div>
     
-    <div id="dialog-form-login" title="Login Form">
-    	<p class="dialog-form-login-validateTips">All form fields are required.</p>
-    
-    	<form id="user_form" action="<?php echo base_url().'main/home/submit';?>" method="post">
-    	<fieldset>
-    		<?php echo form_hidden('forum_id',$this->uri->segment(4));?>
-    		<label>username:</label>
-    		<div class="clr"></div>
-    		<input name="username" id="username" ></input> 
-    		<div class="clr"></div>
-    		<label>password:</label>
-    		<div class="clr"></div>
-    		<input name="password" id="password"></input>
-
-    		<input type="submit" name="submit" id="login_submit" value="submit"  /> 
-    	</fieldset>
-    	</form>
-    </div>
-    
-    
-    <div id="dialog-form-register" title="Register Form">
-    	<p class="dialog-form-register-validateTips">All form fields are required.</p>
-    
-    	<form id="user_form" action="<?php echo base_url().'register/signup/submit';?>" method="post">
-    	<fieldset>
-    		<?php echo form_hidden('forum_id',$this->uri->segment(4));?>
-    		<label>First Name:</label>
-    		<div class="clr"></div>
-    		<input type="text" name="firstname" id="firstname" ></input> 
-    		<div class="clr"></div>
-    		<label>Last Name:</label>
-    		<div class="clr"></div>
-    		<input type="text" name="lastname" id="lastname"></input>
-    		<div class="clr"></div>
-    		<label>Username:</label>
-    		<div class="clr"></div>
-    		<input type="text" name="username" id="username"></input>
-    		<div class="clr"></div>
-    		<label>Password:</label>
-    		<div class="clr"></div>
-    		<input type="text" name="password" id="password"></input>
-    		<div class="clr"></div>
-    		<label>Confirm Password:</label>
-    		<div class="clr"></div>
-    		<input type="password" name="passconf" id="passconf"></input>
-    		<div class="clr"></div>
-    		<label>E-mail:</label>
-    		<div class="clr"></div>
-    		<input type="text" name="email" id="email"></input>
-
-    		<input type="submit" name="submit" id="register_submit" style="visibility:hidden" value=""  /> 
-    	</fieldset>
-    	</form>
-    </div>
+                
     
 </div>
 

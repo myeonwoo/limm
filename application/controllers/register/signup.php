@@ -17,25 +17,23 @@ class Signup extends Controller {
             $this->index();
             return;
         }
-        echo 'ok';
-        return;
-        
         
         /*
          * TODO: insert the user to database
          * 
          * Use Doctrine library
          */
-            $u = new User();
-            $u->firstname = $this->input->post('firstname');
-            $u->lastname = $this->input->post('lastname');
-            $u->username = $this->input->post('username');
-            $u->password = $this->input->post('password');
-            $u->email = $this->input->post('email');
-            $u->save();
-        
-        $data['message'] = 'Your acount was created!';
-        $this->load->view('display_message',$data);
+        $u = new User();
+        $u->firstname = $this->input->post('firstname');
+        $u->lastname = $this->input->post('lastname');
+        $u->username = $this->input->post('username');
+        $u->password = $this->input->post('password');
+        $u->email = $this->input->post('email');
+        $u->save();
+    
+        redirect('main/home/loginerror/register');
+        //$data['message'] = 'Your acount was created!';
+        //$this->load->view('display_message',$data);
     }
     
     private function _submit_validate() {
@@ -43,17 +41,13 @@ class Signup extends Controller {
         // validation rules
         $this->form_validation->set_rules('firstname','First Name','trim|required|alpha');
         $this->form_validation->set_rules('lastname','Last Name','trim|required|alpha');
-        $this->form_validation->set_rules('username', 'Username',
-    			'required|alpha_numeric|min_length[6]|max_length[12]');
+        $this->form_validation->set_rules('username', 'Username','required|alpha_numeric|min_length[2]|max_length[50]');
     
-        $this->form_validation->set_rules('password', 'Password',
-    			'required|min_length[6]|max_length[12]');
+        $this->form_validation->set_rules('password', 'Password','required|min_length[2]|max_length[50]');
     
-        $this->form_validation->set_rules('passconf', 'Confirm Password',
-    			'required|matches[password]');
+        $this->form_validation->set_rules('passconf', 'Confirm Password','required|matches[password]');
     
-        $this->form_validation->set_rules('email', 'E-mail',
-    			'required|valid_email');
+        $this->form_validation->set_rules('email', 'E-mail','required|valid_email');
     
         return $this->form_validation->run();
     

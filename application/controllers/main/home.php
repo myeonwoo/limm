@@ -26,7 +26,8 @@ class Home extends Controller {
     
     function loginerror($message){
         $login_error = array('resume'=>'Login first to know about me!',
-                                'blog'=>'Login first to look my blog','login'=>'Incorrect username or password!');
+        'blog'=>'Login first to look my blog','login'=>'Incorrect username or password!',
+        'register'=>'Your account have been registered.');
         $data =& $this->data;
         $data['user_message'] = $login_error[$message];
         $this->load->view('main/template/view_1',$data);

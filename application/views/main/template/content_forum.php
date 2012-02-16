@@ -73,24 +73,7 @@
         
         </div>
         
-        <div id="dialog-form-thread" title="Create new user">
-        	<p class="validateTips">All form fields are required.</p>
         
-        	<form id="user_form" action="http://localhost/limm/index.php/main/forums/thread_insert" method="post">
-        	<fieldset>
-        		<?php echo form_hidden('forum_id',$this->uri->segment(4));?>
-        		<label>Title:</label>
-        		<div class="clr"></div>
-        		<textarea name="thread_title" id="thread_title" cols="50" rows="2" ></textarea> 
-        		<div class="clr"></div>
-        		<label>Content:</label>
-        		<div class="clr"></div>
-        		<textarea name="post_comment" id="post_comment" cols="50" rows="5" ></textarea>
-
-        		<input type="submit" name="submit" id="user_submit" style="visibility:hidden" value="create"  /> 
-        	</fieldset>
-        	</form>
-        </div>
     </div>
     
     <div class="sidebar">
@@ -99,3 +82,22 @@
     <div class="clr"></div>
 
 </div></div>
+
+<div id="dialog-form-thread" title="Create new user">
+	<p class="validateTips">All form fields are required.</p>
+
+	<form id="user_form" action="http://localhost/limm/index.php/main/forums/thread_insert" method="post">
+	<fieldset>
+		<?php echo form_hidden('forum_id',$this->uri->segment(4));?>
+		<label>Title:</label>
+		<div class="clr"></div>
+		<textarea name="thread_title" id="thread_title" cols="50" rows="2" ></textarea> 
+		<div class="clr"></div>
+		<label>Content:</label>
+		<div class="clr"></div>
+		<textarea name="post_comment" id="post_comment" cols="50" rows="5" ></textarea>
+
+		<input type="submit" name="submit" id="user_submit" style="visibility:hidden" value="create"  /> 
+	</fieldset>
+	</form>
+</div>
