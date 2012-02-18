@@ -1,3 +1,14 @@
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+	$( '#gre-word' ).button().click ( function ( ) {
+		alert('hi');
+    });
+
+});
+</script>
+
   <div class="content">
     <div class="content_resize">
       <div class="mainbar">
@@ -27,19 +38,11 @@
       
       <div class="sidebar">
 
-        <div class="searchform">
-          <form id="formsearch" name="formsearch" method="post" action="#">
-            <span>
-            <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="Search our ste:" type="text" />
-            </span>
-            <input name="button_search" src="images/search_btn.gif" class="button_search" type="image" />
-          </form>
-        </div>
         <div class="gadget">
           <h2 class="star"><span>Sidebar</span> Menu</h2>
           <div class="clr"></div>
           <ul class="sb_menu">
-            <li><a href="#">Home</a></li>
+            <li><button id='gre-word'>GRE</button></li>
             <li><a href="#">TemplateInfo</a></li>
             <li><a href="#">Style Demo</a></li>
             <li><a href="#">Blog</a></li>
